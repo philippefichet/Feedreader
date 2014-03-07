@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /index/                     controllers.MainController.index()
+GET     /feed                       controllers.FeedController.get()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /webjars/*file              controllers.WebJarAssets.at(file)
+
+# admin
+GET     /admin                 controllers.AdminController.index()
+
+# feed API
+PUT     /feed                  controllers.FeedController.add()
+POST    /feed                  controllers.FeedController.update(id: Integer)
+DELETE /feed                   controllers.FeedController.remove(id: Integer)
+GET    /                       controllers.FeedController.show()
+GET    /feed/:id               controllers.FeedController.showOne(id: Integer)
+GET    /feed/:id/refresh       controllers.FeedController.refreshOne(id: Integer)
+
+# feedItem API
+GET    /feed/:id/item                 controllers.FeedItemController.feedItem(id: Integer, page: Integer)
+#POST  /feedItem/:id/readed/:readed    controllers.FeedItemController.setReaded(id: Integer, readed: Boolean)
+POST  /feedItem/:id/readed/true    controllers.FeedItemController.setReadedTrue(id: Integer)
+POST  /feedItem/:id/readed/false    controllers.FeedItemController.setReadedFalse(id: Integer)
+
+# Websocket
+GET   /live/feed                      controllers.LiveController.feed()
