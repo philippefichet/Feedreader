@@ -30,7 +30,7 @@ public class FeedRefresh extends UntypedActor {
 				logger.info(new Date() + ": Recherche des mise à jours de flux dans la transaction JPA");
 				FeedBuisness.updateAllFeed(JPA.em());
 			}
-		};
+		});
 		logger.info(new Date() + ": Fin de la recherche des mise à jours de flux");
 	}
 	
