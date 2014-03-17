@@ -120,4 +120,32 @@ public class FeedBuisness {
 		}
 		return counter;
 	}
+	
+	public static Map<Feed, FeedItem> updateAllFeed(EntityManager em) {
+		List<Feed> feeds = findAll(em);
+		Map<Feed, FeedItem> feedsUpdated = new HashMap<>();
+		for (Feed feed : feeds) {
+			TypedQuery<FeedItem> lastItemQuery = em.createNamedQuery(FeedItem.findAllByFeedId, FeedItem.class);
+			lastItemQuery.setParameter("feedId", feed.getId());
+			lastItemQuery.setMaxResults(1);
+			try {
+				FeedItem feedItem = lastItemQuery.getSingleResult();
+				logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : " + feedItem.getUpdated().toString());
+				List<FeedItem> feedItems = refreshFeedItems(em, feed.getId());
+			} catch(javax.persistence.NoResultException e) {
+				logger.info("Premier flux récupérer pour \"" + feed.getName() + "\"");
+				try {
+					List<FeedItem> feedItems = refreshFeedItems(em, feed.getId());
+				} catch (Exception e1) {
+					logger.info("Erreur lors de la récumération du premier flux pour \"" + feed.getName() + "\"");
+					e.printStackTrace();
+				}
+			} catch (Exception e) {
+				logger.error("Erreur lors de la mise à jour du flux : \"" + feed.getName() + "\"");
+				e.printStackTrace();
+			}
+		}
+//		FeedBuisness.countUnread(JPA.em());
+		return feedsUpdated;
+	}
 }

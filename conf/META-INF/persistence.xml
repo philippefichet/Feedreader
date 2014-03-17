@@ -4,7 +4,7 @@
              version="2.0">
              
     <persistence-unit name="feedreaderPU" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <non-jta-data-source>feedreader</non-jta-data-source>
         <class>fr.feedreader.models.Feed</class>
         <class>fr.feedreader.models.FeedItem</class>
@@ -13,7 +13,7 @@
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <property name="hibernate.show_sql" value="false"/>
-			<property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
     

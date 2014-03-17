@@ -52,3 +52,7 @@ body #feed-one .glyphicon.glyphicon-star, #feed-one .glyphicon.glyphicon-star-em
 	color: red;
 	border: 1px solid red;
 }
+
+.feeditem-resume {
+padding-left: 1em;
+}

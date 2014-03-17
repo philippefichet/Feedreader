@@ -17,36 +17,21 @@ import akka.actor.UntypedActor;
 import play.db.jpa.JPA;
 import play.libs.Akka;
 import play.libs.F;
+import play.libs.WS;
 
 public class FeedRefresh extends UntypedActor {
 
 	public void onReceive(Object message) throws Exception {
 		final Logger logger = LoggerFactory.getLogger(getClass());
-		logger.info(new Date() + "Recherche des mise à jours de flux");
+		logger.info(new Date() + ": Debut de la recherche des mise à jours de flux");
 		JPA.withTransaction(new F.Callback0() {
-			
 			@Override
 			public void invoke() throws Throwable {
-				EntityManager em = JPA.em();
-				List<Feed> feeds = FeedBuisness.findAll(em);
-				for (Feed feed : feeds) {
-					TypedQuery<FeedItem> lastItemQuery = em.createNamedQuery(FeedItem.findAllByFeedId, FeedItem.class);
-					lastItemQuery.setParameter("feedId", feed.getId());
-					lastItemQuery.setMaxResults(1);
-					try {
-						FeedItem feedItem = lastItemQuery.getSingleResult();
-						logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : " + feedItem.getUpdated().toString());
-						List<FeedItem> feedItems = FeedBuisness.refreshFeedItems(em, feed.getId());
-					} catch(javax.persistence.NoResultException e) {
-						logger.info("Permier flux récupérer pour \"" + feed.getName() + "\"");
-						List<FeedItem> feedItems = FeedBuisness.refreshFeedItems(em, feed.getId());
-					}
-				}
-				FeedBuisness.countUnread(JPA.em());
+				logger.info(new Date() + ": Recherche des mise à jours de flux dans la transaction JPA");
+				FeedBuisness.updateAllFeed(JPA.em());
 			}
-		});
-
-		
+		};
+		logger.info(new Date() + ": Fin de la recherche des mise à jours de flux");
 	}
 	
 }

@@ -32,9 +32,9 @@
 						<li><a class="tab-link" href="#feedItem-{{feedItem.id}}-link">Article</a></li>
 						<li><a class="tab-open" href="{{feedItem.link}}">Ouvrir le lien</a></li>
 					</ul>
-					<p ng-if="feedItem.summary"class="resume" id="feedItem-{{feedItem.id}}-resume" ng-bind-html="feedItem.summary">
+					<p ng-if="feedItem.summary" class="feeditem-resume" id="feedItem-{{feedItem.id}}-resume" ng-bind-html="feedItem.summary">
 					<p>
-					<p ng-if="!feedItem.summary"class="resume" id="feedItem-{{feedItem.id}}-resume">
+					<p ng-if="!feedItem.summary" class="resume" id="feedItem-{{feedItem.id}}-resume">
 						--- Pas de résumé ---
 					<p>
 					<p class="link" id="feedItem-{{feedItem.id}}-link" data-href="{{feedItem.link}}">
