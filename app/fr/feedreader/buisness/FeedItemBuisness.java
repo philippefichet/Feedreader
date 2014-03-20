@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-import views.html.feed;
 import fr.feedreader.models.FeedItem;
 
 public class FeedItemBuisness {

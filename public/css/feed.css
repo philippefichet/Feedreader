@@ -49,8 +49,6 @@ body #feed-one .glyphicon.glyphicon-star, #feed-one .glyphicon.glyphicon-star-em
 
 .feed button .badge {
 	float: right;
-	color: red;
-	border: 1px solid red;
 }
 
 .feeditem-resume {

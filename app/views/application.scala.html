@@ -1,0 +1,19 @@
+@(application: conf.Application, errors: java.util.Map[String, String])
+@layout.admin.application("Configuration") {
+<div id="application">
+	@helper.form(action = routes.AdminController.saveApplication(), 'role -> "form") {
+		<div class="form-group">
+			<label for="theme">Theme</label>
+			@if(errors.containsKey("bootswatch")) {
+			 <div class="alert alert-danger">@errors.get("bootswatch")</div>
+			}
+			<select name="bootswatch" class="form-control"> @for(e <- application.getBootswatchAvailable().entrySet()) {
+				<option value="@e.getValue()" @if(application.getBootswatch().equals(e.getValue())) { selected }>@e.getKey() - @e.getValue()</option>}
+			</select>
+		</div>
+	    <div class="form-group">
+	        <button type="submit" class="btn btn-default">Sauvegarder</button>
+	    </div>
+    }
+</div>
+}

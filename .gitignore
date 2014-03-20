@@ -21,3 +21,4 @@ dist
 *.target
 *.swp
 /bin
+.feedreader/

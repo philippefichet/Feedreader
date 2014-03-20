@@ -24,39 +24,7 @@ import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 
 public class FeedController extends Controller {
-
-	@Transactional
-	public static Result refreshOne(Integer id) {
-		Feed feed = FeedBuisness.find(JPA.em(), id);
-		if (feed == null) {
-			return notFound("Flux non trouvé");
-		} else {
-			try {
-				List<FeedItem> feedItems = FeedBuisness.refreshFeedItems(JPA.em(), id);
-				return ok(views.html.feedOne.render(feed, feedItems));
-			} catch (Exception e) {
-				return internalServerError("Mise à jours du flux \"" + feed.getName() + "\" (" + feed.getUrl() +") échec.\n" + e.getMessage());
-			}
-			
-		}
-	}
 	
-	@Transactional(readOnly=true)
-	public static Result showOne(Integer id) throws ClientProtocolException, IOException {
-		Feed feed = FeedBuisness.find(JPA.em(), id);
-		List<FeedItem> feedItems = null;
-		if (feed == null) {
-			return notFound("Flux non trouvé");
-		} else {
-			try {
-				feedItems = FeedBuisness.getFeedItems(JPA.em(), id);
-			} catch(Exception e) {
-				return internalServerError(e.getMessage());
-			}
-			return ok(views.html.feedOne.render(feed, feedItems));
-		}
-	}
-
 	@Transactional(readOnly=true)
 	@Security.Authenticated(SecuredUser.class)
 	public static Result show() {
