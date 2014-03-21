@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -26,7 +27,7 @@ import play.libs.Json;
 
 public class LiveController extends Controller {
 	
-	private static Map<WebSocket.In<JsonNode>, WebSocket.Out<JsonNode>> users = new HashMap<>();
+	private static Map<WebSocket.In<JsonNode>, WebSocket.Out<JsonNode>> users = new ConcurrentHashMap<>();
 	
 	public static void sendFeedItems(List<FeedItem> feedItems) {
 		ObjectNode json = Json.newObject();
