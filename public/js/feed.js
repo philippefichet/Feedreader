@@ -125,10 +125,14 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
 			$scope.$apply(function() {
 				if (data.type == "feeds") {
 					$scope.feeds = data.feeds;
+					console.log($scope.currentFeed);
 					
-					// Reséléction du flux afficher
-					for(var i = 0; i < $scope.feeds.length; i++) {
-						$scope.feeds[i].selected = ($scope.feeds[i].id == $scope.currentFeed.id);
+					// Si il y a un bien un flux séléctionner
+					if ($scope.currentFeed !== null && $scope.currentFeed !== undefined) {
+						// Reséléction du flux afficher
+						for(var i = 0; i < $scope.feeds.length; i++) {
+							$scope.feeds[i].selected = ($scope.feeds[i].id == $scope.currentFeed.id);
+						}
 					}
 					
 					for(var i = 0; i < data.feedItems.length; i++) {
