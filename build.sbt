@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(
   "org.webjars" %% "webjars-play" % "2.2.1-2",
   "org.hibernate" % "hibernate-entitymanager" % "4.3.4.Final",
   "com.h2database" % "h2" % "1.3.175",
+  "org.hsqldb" % "hsqldb" % "2.3.2",
   //"org.apache.httpcomponents" % "httpclient" % "4.3.2",
   //"org.apache.directory.studio" % "org.apache.commons.io" % "2.4",
   // webjars
