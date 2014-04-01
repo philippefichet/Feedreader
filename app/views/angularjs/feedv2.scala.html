@@ -10,7 +10,7 @@
     <div id="feed-items-container">
         <div class="loader" ng-if="feedItemsLoading"> Loading ... </div>
         <div id="feed-one-paginator">
-            <button ng-class="{'btn-success': page.selected, 'btn-primary': !page.selected}" class="btn page" ng-repeat="page in feedItemPages" ng-click="loadFeedItem('/feedreader/feed/{{feed.id}}/item?page={{page}}', feed, page.id)">{{page.id}}</button>
+            <button ng-class="{'btn-success': page.selected, 'btn-primary': !page.selected}" class="btn page" ng-repeat="page in feedItemPages" ng-click="loadFeedItem('/feedreader/feed/{{feed.id}}/item?page={{page}}', feed, page.id)">{{page.label}}</button>
         </div>
         <div id="feed-one">
             <div class="panel panel-default" ng-repeat="feedItem in feedItems" data-readed="{{feedItem.url.toRead}}">

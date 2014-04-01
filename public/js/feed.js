@@ -84,8 +84,27 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
         $http.get(url).success(function(feedItemInfo) {
             $scope.feedItems = feedItemInfo.feedItems;
             $scope.feedItemPages = [];
-            for (var i = 1; i <= feedItemInfo.pages; i++) {
-                $scope.feedItemPages.push({"id": i, "selected": i == page})
+            if (page > 1) {
+                $scope.feedItemPages.push({"id": page - 1, "label": "<", "selected": false})
+            }
+            // Page minimal à afficher
+            var startPage = Math.max(1, page - 2);
+            
+            // Page maximal à afficher
+            var endPage = Math.min(feedItemInfo.pages, page + 2);
+            // Si page une ajout de 2 a la fin si possible
+            if (page < 2) {
+                endPage = Math.min(feedItemInfo.pages, page + 4);
+            // Si page deux ajout de 1 a la fin si possible
+            } else if (page < 3) {
+                endPage = Math.min(feedItemInfo.pages, page + 3);
+            }
+            
+            for (var i = startPage; i <= endPage; i++) {
+                $scope.feedItemPages.push({"id": i, "label": i, "selected": i == page})
+            }
+            if (page < feedItemInfo.pages) {
+                $scope.feedItemPages.push({"id": page + 1, "label": ">", "selected": false})
             }
             $scope.feedItemsLoading = false;
         })
