@@ -1,19 +1,19 @@
 #feed {
-	position: relative;
+    position: relative;
     padding-left: 1em;
 }
 
 #feed .loader {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,1);
-	color: #fff;
-	text-align: center;
-	background-image: url(/feedreader/assets/images/loader-black.gif);
-	background-position: center center;
-	background-repeat: no-repeat;
-	opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,1);
+    color: #fff;
+    text-align: center;
+    background-image: url(/feedreader/assets/images/loader-black.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
 }
 
 #feed h2 {
@@ -21,31 +21,31 @@
 }
 
 #feed-items-container {
-	min-height: 20em;
+    min-height: 20em;
 }
 
 #feed-one-paginator {
-	text-align: center;
+    text-align: center;
 }
 #feed-one-paginator .page {
-	margin: 0.5em
+    margin: 0.5em
 }
 
 #feed-one .panel {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 #feed-one iframe {
-	width: 100%;
-	min-height: 50em;
+    width: 100%;
+    min-height: 50em;
 }
 
 #feed-one .readed {
-	cursor:  pointer;
+    cursor:  pointer;
 }
 
 body #feed-one .glyphicon.glyphicon-star, #feed-one .glyphicon.glyphicon-star-empty {
-	color: orange;
+    color: orange;
 }
 
 .feed {
