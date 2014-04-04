@@ -81,7 +81,8 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
      * @param object feed Flux selectionné
      * @param integer page Numéro de page des articles a récupérer
      */
-    $scope.loadFeedItem = function(url, feed, page) {
+    $scope.loadFeedItem = function(feed, page) {
+        url = $window.webservicesUrl['feedItem'];
         $scope.feedItemsLoading = true;
         if (feed == undefined) {
             feed = $scope.currentFeed;
@@ -123,6 +124,7 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
                 $scope.feedItemPages.push({"id": page + 1, "label": ">", "selected": false})
             }
             $scope.feedItemsLoading = false;
+            window.location.hash = $scope.currentFeed.id + "/" + page;
         })
     }
 
@@ -132,6 +134,21 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
             $scope.feeds[i].selected = false;
         }
         $scope.feedLoading = true;
+        // Si il y a du deeplink
+        var hash = $window.location.hash;
+        if (hash !== "") {
+            // Suppression de #
+            hash = hash.substr(1, hash.length - 1);
+            deepLinking = hash.split("/");
+            if (deepLinking.length > 1) {
+                for (var i = 0; i < $scope.feeds.length; i++) {
+                    if ($scope.feeds[i].id == deepLinking[0])
+                    {
+                        $scope.loadFeedItem($scope.feeds[i], deepLinking[1]);
+                    }
+                }
+            }
+        }
     });
 
 //	alert($window.webkitNotifications.checkPermission());

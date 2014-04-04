@@ -1,10 +1,9 @@
 @layout.feed("Visualisation des flux rss/atom") {
-
 <div id="feed" class="row" ng-controller="FeedController">
     <div>
         <div class="loader" ng-if="!feedLoading"> Loading ... </div>
         <div ng-if="feedLoading" ng-repeat="feed in feeds" class="feed">
-            <button ng-class="{'btn-success': feed.selected, 'btn-default': !feed.selected}" type="button" class="btn" ng-click="loadFeedItem('/feedreader/feed/{{feed.id}}/item?page={{page}}', feed)" >{{feed.name}}<span ng-if="feed.unread > 0" class="badge">{{feed.unread}}</span></button>
+            <button ng-class="{'btn-success': feed.selected, 'btn-default': !feed.selected}" type="button" class="btn" ng-click="loadFeedItem(feed)" >{{feed.name}}<span ng-if="feed.unread > 0" class="badge">{{feed.unread}}</span></button>
         </div>
     </div>
     <div id="feed-items-container">
@@ -13,7 +12,7 @@
             <h2>{{currentFeed.name}}</h2>
         </div>
         <div id="feed-one-paginator">
-            <button ng-class="{'btn-success': page.selected, 'btn-primary': !page.selected}" class="btn page" ng-repeat="page in feedItemPages" ng-click="loadFeedItem('/feedreader/feed/{{feed.id}}/item?page={{page}}', feed, page.id)">{{page.label}}</button>
+            <button ng-class="{'btn-success': page.selected, 'btn-primary': !page.selected}" class="btn page" ng-repeat="page in feedItemPages" ng-click="loadFeedItem(feed, page.id)">{{page.label}}</button>
         </div>
         <div id="feed-one">
             <div class="panel panel-default" ng-repeat="feedItem in feedItems" data-readed="{{feedItem.url.toRead}}">
