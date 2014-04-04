@@ -1,5 +1,6 @@
 #feed {
 	position: relative;
+    padding-left: 1em;
 }
 
 #feed .loader {
@@ -13,6 +14,10 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	opacity: 0.5;
+}
+
+#feed h2 {
+    text-align: center;
 }
 
 #feed-items-container {
@@ -43,14 +48,10 @@ body #feed-one .glyphicon.glyphicon-star, #feed-one .glyphicon.glyphicon-star-em
 	color: orange;
 }
 
-.feed button {
-	width: 100%;
+.feed {
+    display: inline-block;
 }
 
-.feed button .badge {
-	float: right;
-}
-
-.feeditem-resume {
-padding-left: 1em;
+.feed .badge {
+    margin-left: 1em;
 }
