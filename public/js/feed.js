@@ -4,9 +4,9 @@ var FeedReader = angular.module('FeedReader', ['ngSanitize']);
 FeedReader.controller('FeedController', function($scope, $http, $window) {
     $scope.error = null;
     $scope.feeds = [];
-    $scope.feedSelected = null;
+    $scope.currentFeed = null;
     $scope.feedItemsLoading = false,
-        $scope.feedItems = [];
+    $scope.feedItems = [];
     $scope.feedItemPages = [];
     $scope.feedLoading = false;
 
@@ -22,6 +22,11 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
         })
     }
 
+    /**
+     * Ajout/Sauvegarde un flux
+     * @param objcet feed Flux à ajouter/sauvegarder
+     * @param integer index Index du flux dans les flux présent pour mise à jour aprés sauvegarde
+     */
     $scope.saveFeed = function(feed, index) {
         feed.sync = true;
         if (feed.id == -1) {
@@ -57,6 +62,11 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
         });
     }
 
+    /**
+     * Change la valeur de lu/non lu
+     * @param string url Url à appeler pour marquer lu/non lu un article
+     * @param integer $index Index dans la liste des article de la pages afficher a marqué comme lu/non lu
+     */
     $scope.setReaded = function(url, $index) {
         $http.post(url).success(function(data) {
             $scope.feedItems[$index].readed = data.readed;
@@ -65,6 +75,12 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
         return;
     }
 
+    /**
+     * Chargement de la liste des articles d'un flux
+     * @param string url Url de récupération de la liste des articles
+     * @param object feed Flux selectionné
+     * @param integer page Numéro de page des articles a récupérer
+     */
     $scope.loadFeedItem = function(url, feed, page) {
         $scope.feedItemsLoading = true;
         if (feed == undefined) {
