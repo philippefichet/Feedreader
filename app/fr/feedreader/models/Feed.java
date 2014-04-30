@@ -1,5 +1,6 @@
 package fr.feedreader.models;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -29,6 +30,10 @@ public class Feed {
 	@OneToMany(mappedBy="feed")
 	@OrderBy(value="updated DESC")
 	private List<FeedItem> feedItems;
+	
+    private Date lastUpdate;
+    
+	private Boolean enable = Boolean.TRUE;
 	
 	public Integer getId() {
 		return id;
@@ -61,6 +66,26 @@ public class Feed {
 	public void setFeedItems(List<FeedItem> feedItems) {
 		this.feedItems = feedItems;
 	}
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
+
+    public Boolean isEnable() {
+        if (enable == null) {
+            return Boolean.FALSE;
+        }
+        return enable;
+    }
+
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
+    }
+    
 	@Override
 	public int hashCode() {
 		final int prime = 31;

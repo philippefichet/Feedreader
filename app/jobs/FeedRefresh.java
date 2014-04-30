@@ -1,7 +1,9 @@
 package jobs;
 
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -21,16 +23,24 @@ import play.libs.WS;
 
 public class FeedRefresh extends UntypedActor {
 
+	private static final Logger logger = LoggerFactory.getLogger(FeedRefresh.class);
+	
 	public void onReceive(Object message) throws Exception {
-		final Logger logger = LoggerFactory.getLogger(getClass());
+		
 		logger.info(new Date() + ": Debut de la recherche des mise à jours de flux");
 		JPA.withTransaction(new F.Callback0() {
 			@Override
 			public void invoke() throws Throwable {
 				logger.info(new Date() + ": Recherche des mise à jours de flux dans la transaction JPA");
-				FeedBuisness.updateAllFeed(JPA.em());
+				Map<Feed, List<FeedItem>> feedUpdated = FeedBuisness.updateAllFeed(JPA.em());
+				Iterator<Feed> feedIterator = feedUpdated.keySet().iterator();
+				while(feedIterator.hasNext())
+				{
+					feedIterator.next();
+				}
 			}
 		});
+		
 		logger.info(new Date() + ": Fin de la recherche des mise à jours de flux");
 	}
 	

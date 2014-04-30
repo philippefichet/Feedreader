@@ -19,12 +19,15 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import fr.feedreader.buisness.FeedBuisness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
+import java.text.SimpleDateFormat;
 import play.api.Application;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 
 public class FeedController extends Controller {
 	
+    private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    
 	@Transactional(readOnly=true)
 	@Security.Authenticated(SecuredUser.class)
 	public static Result show() {
@@ -78,6 +81,9 @@ public class FeedController extends Controller {
 		feedJson.put("id", feed.getId());
 		feedJson.put("name", feed.getName());
 		feedJson.put("url", feed.getUrl());
+        if (feed.getLastUpdate() != null) {
+            feedJson.put("lastUpdate", sdf.format(feed.getLastUpdate()));
+        }
 		return feedJson;
 	}
 

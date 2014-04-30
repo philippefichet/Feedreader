@@ -25,6 +25,7 @@ import scala.Proxy.Typed;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import fr.feedreader.models.FeedUnreadCounter;
+import java.util.Date;
 
 public class FeedBuisness {
 	
@@ -91,6 +92,9 @@ public class FeedBuisness {
 					LoggerFactory.getLogger(FeedBuisness.class).error("Erreur dans la récupértion d'un flux " + id + ", \"" + feedItem.getFeedItemId() + "\n", e);
 				}
 			}
+            // Mise à jour de la date de récupération du flux
+            feed.setLastUpdate(new Date());
+            update(em, feed);
 		}
 		return updatedFeedItem;
 	}
@@ -121,21 +125,27 @@ public class FeedBuisness {
 		return counter;
 	}
 	
-	public static Map<Feed, FeedItem> updateAllFeed(EntityManager em) {
+	public static Map<Feed, List<FeedItem>> updateAllFeed(EntityManager em) {
 		List<Feed> feeds = findAll(em);
-		Map<Feed, FeedItem> feedsUpdated = new HashMap<>();
+		// Liste des nouveaux flux avec les articles
+		Map<Feed, List<FeedItem>> feedsUpdated = new HashMap<>();
 		for (Feed feed : feeds) {
+			// Récupération de l'article le plus récent
 			TypedQuery<FeedItem> lastItemQuery = em.createNamedQuery(FeedItem.findAllByFeedId, FeedItem.class);
 			lastItemQuery.setParameter("feedId", feed.getId());
 			lastItemQuery.setMaxResults(1);
 			try {
 				FeedItem feedItem = lastItemQuery.getSingleResult();
 				logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : " + feedItem.getUpdated().toString());
+				
+				// Récupération des de nouveau article 
 				List<FeedItem> feedItems = refreshFeedItems(em, feed.getId());
+				feedsUpdated.put(feed, feedItems);
 			} catch(javax.persistence.NoResultException e) {
 				logger.info("Premier flux récupérer pour \"" + feed.getName() + "\"");
 				try {
 					List<FeedItem> feedItems = refreshFeedItems(em, feed.getId());
+					feedsUpdated.put(feed, feedItems);
 				} catch (Exception e1) {
 					logger.info("Erreur lors de la récumération du premier flux pour \"" + feed.getName() + "\"");
 					e.printStackTrace();

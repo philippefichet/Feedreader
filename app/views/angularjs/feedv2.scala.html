@@ -3,13 +3,14 @@
     <div>
         <div class="loader" ng-if="!feedLoading"> Loading ... </div>
         <div ng-if="feedLoading" ng-repeat="feed in feeds" class="feed">
-            <button ng-class="{'btn-success': feed.selected, 'btn-default': !feed.selected}" type="button" class="btn" ng-click="loadFeedItem(feed)" >{{feed.name}}<span ng-if="feed.unread > 0" class="badge">{{feed.unread}}</span></button>
+            <button title="{{feed.lastUpdate}}" ng-class="{'btn-success': feed.selected, 'btn-default': !feed.selected}" type="button" class="btn" ng-click="loadFeedItem(feed)" >{{feed.name}}<span ng-if="feed.unread > 0" class="badge">{{feed.unread}}</span></button>
         </div>
     </div>
     <div id="feed-items-container">
         <div class="loader" ng-if="feedItemsLoading"> Loading ... </div>
-        <div ng-if="currentFeed != null">
+        <div ng-if="currentFeed != null" style="text-align: center">
             <h2>{{currentFeed.name}}</h2>
+            <small>{{currentFeed.lastUpdate}}</small>
         </div>
         <div id="feed-one-paginator">
             <button ng-class="{'btn-success': page.selected, 'btn-primary': !page.selected}" class="btn page" ng-repeat="page in feedItemPages" ng-click="loadFeedItem(feed, page.id)">{{page.label}}</button>
