@@ -9,7 +9,7 @@ GET     /feed                       controllers.FeedController.get()
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /webjars/*file              controllers.WebJarAssets.at(file)
 
-# admin
+# admin 
 GET     /admin                 controllers.AdminController.index()
 GET     /admin/application     controllers.AdminController.application()
 POST    /admin/application     controllers.AdminController.saveApplication()
@@ -17,12 +17,11 @@ POST    /admin/application     controllers.AdminController.saveApplication()
 # feed API
 PUT     /feed                  controllers.FeedController.add()
 POST    /feed                  controllers.FeedController.update(id: Integer)
-DELETE /feed                   controllers.FeedController.remove(id: Integer)
-GET    /                       controllers.FeedController.show()
+DELETE  /feed                   controllers.FeedController.remove(id: Integer)
+GET     /                       controllers.FeedController.show()
 
 # feedItem API
 GET    /feed/:id/item                 controllers.FeedItemController.feedItem(id: Integer, page: Integer)
-#POST  /feedItem/:id/readed/:readed    controllers.FeedItemController.setReaded(id: Integer, readed: Boolean)
 POST  /feedItem/:id/readed/true    controllers.FeedItemController.setReadedTrue(id: Integer)
 POST  /feedItem/:id/readed/false    controllers.FeedItemController.setReadedFalse(id: Integer)
 
