@@ -1,7 +1,15 @@
 #feed {
     position: relative;
-    padding-left: 1em;
+    margin: 0;
 }
+
+#feed .panel-heading {
+    padding: 0;
+}
+#feed .panel-heading h4 {
+    padding: 10px 15px;
+}
+
 
 #feed .loader {
     position: absolute;
@@ -18,6 +26,15 @@
 
 #feed h2 {
     text-align: center;
+}
+
+#feed-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+#feed-list-toggle {
+    display: none;
 }
 
 #feed-items-container {
@@ -54,4 +71,57 @@ body #feed-one .glyphicon.glyphicon-star, #feed-one .glyphicon.glyphicon-star-em
 
 .feed .badge {
     margin-left: 1em;
+}
+
+@media screen and (max-width:1000px) {
+    #feed-list {
+        position: fixed;
+        max-height: 100%;
+        border: 5px solid;
+        border-radius: 5px;
+        width: 80%;
+        top: 0;
+        left: -80%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 1000;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+    }
+    #feed-list.open {
+        left: 0;
+    }
+
+    #feed-list ul {
+        width: 100%;
+        list-style: none;
+    }
+    #feed-list ul li {
+        display: block;
+        width: 100%;
+    }
+    #feed-list ul li .btn {
+        width: 100%;
+    }
+
+    #feed-list-toggle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        cursor: pointer;
+        background: url(/feedreader/assets/images/list.svg);
+        background-size: 32px 32px;
+        width: 32px;
+        height: 32px;
+        z-index: 2000;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+    }
+    #feed-list-toggle.open {
+        left: 80%;
+    }
+
 }

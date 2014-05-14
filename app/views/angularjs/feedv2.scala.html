@@ -1,11 +1,14 @@
 @layout.feed("Visualisation des flux rss/atom") {
 <div id="feed" class="row" ng-controller="FeedController">
-    <div>
+    <div id="feed-list">
         <div class="loader" ng-if="!feedLoading"> Loading ... </div>
-        <div ng-if="feedLoading" ng-repeat="feed in feeds" class="feed">
-            <button title="{{feed.lastUpdate}}" ng-class="{'btn-success': feed.selected, 'btn-default': !feed.selected}" type="button" class="btn" ng-click="loadFeedItem(feed)" >{{feed.name}}<span ng-if="feed.unread > 0" class="badge">{{feed.unread}}</span></button>
-        </div>
+        <ul>
+            <li ng-if="feedLoading" ng-repeat="feed in feeds" class="feed">
+                <button title="{{feed.lastUpdate}}" ng-class="{'btn-success': feed.selected, 'btn-default': !feed.selected}" type="button" class="btn" ng-click="loadFeedItem(feed)" >{{feed.name}}<span ng-if="feed.unread > 0" class="badge">{{feed.unread}}</span></button>
+            </li>
+        </ul>
     </div>
+    <div id="feed-list-toggle"></div>
     <div id="feed-items-container">
         <div class="loader" ng-if="feedItemsLoading"> Loading ... </div>
         <div ng-if="currentFeed != null" style="text-align: center">
@@ -18,7 +21,7 @@
         <div id="feed-one">
             <div class="panel panel-default" ng-repeat="feedItem in feedItems" data-readed="{{feedItem.url.toRead}}">
                 <div class="panel-heading">
-                    <h4 class="panel-title">
+                    <h4 class="panel-title" ng-class="{'bg-info': !feedItem.readed}">
                         <span class="readed" ng-click="setReaded(feedItem.url.reverseReaded, $index)">
                             <span ng-if="feedItem.readed" class="glyphicon glyphicon-star"></span>
                             <span ng-if="!feedItem.readed" class="glyphicon glyphicon-star-empty"></span>
