@@ -255,8 +255,13 @@ $(document).ready(function() {
             $.ajax({
                 "url": urlReaded,
                 "type": "POST",
-                "dataType": "json",
+                "dataType": "json"
             })
         }
     });
+    
+    $(document).on('click', "#feed-list-toggle", function() {
+        $("#feed-list").toggleClass("open");
+        $("#feed-list-toggle").toggleClass("open");
+    })
 })
