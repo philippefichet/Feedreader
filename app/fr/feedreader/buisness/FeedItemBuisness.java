@@ -6,29 +6,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import fr.feedreader.models.FeedItem;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class FeedItemBuisness {
-    private static Logger logger = LoggerFactory.getLogger(FeedBuisness.class);
 	private static Integer itemPerPage = 20;
 	
 	public static FeedItem create(EntityManager em, FeedItem feedItem) {
-        try {
-            em.persist(feedItem);
-        } catch (Exception e ) {
-            e.printStackTrace();
-            logger.debug("**********************");
-            logger.debug("feedItem.getEnclosure : " + feedItem.getEnclosure());
-            logger.debug("feedItem.getFeedItemId : " + feedItem.getFeedItemId());
-            logger.debug("feedItem.getLink : " + feedItem.getLink());
-            logger.debug("feedItem.getSummary : " + feedItem.getSummary());
-            logger.debug("feedItem.getTitle : " + feedItem.getTitle());
-            logger.debug("feedItem.getId : " + feedItem.getId());
-            logger.debug("feedItem.getReaded : " + feedItem.getReaded());
-            logger.debug("feedItem.getUpdated : " + feedItem.getUpdated());
-            logger.debug("feedItem.getFeed : " + feedItem.getFeed());
-        }
+		em.persist(feedItem);
 		return feedItem;
 	}
 	
