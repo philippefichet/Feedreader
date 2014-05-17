@@ -15,119 +15,117 @@ import javax.persistence.TemporalType;
 
 @Entity
 @NamedQueries({
-	@NamedQuery(name=FeedItem.searchByFeedIdAndFeedItemId, query="SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId = :feedItemId"),
-	@NamedQuery(name=FeedItem.findAllByFeedId, query="SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId ORDER BY fi.updated DESC"),
-	@NamedQuery(name=FeedItem.countByFeedId, query="SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId")
+    @NamedQuery(name = FeedItem.searchByFeedIdAndFeedItemId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId = :feedItemId"),
+    @NamedQuery(name = FeedItem.findAllByFeedId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId ORDER BY fi.updated DESC"),
+    @NamedQuery(name = FeedItem.countByFeedId, query = "SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId")
 })
 public class FeedItem {
-	
-	public final static String searchByFeedIdAndFeedItemId = "fr.feedreader.models.FeedItem.searchByFeedIdAndFeedItemId"; 
-	public final static String findAllByFeedId = "fr.feedreader.models.FeedItem.findAllByFeedId";
-	public final static String countByFeedId = "fr.feedreader.models.FeedItem.count";
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
-	
-	private String feedItemId;
-	private String title;
-	private String link;
-	private String enclosure;
-	
-	@Column(length=32768)
-	private String summary;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date updated;
-	
-	@ManyToOne
-	private Feed feed;
-	
-	private Boolean readed = null;
-	
-	public String getFeedItemId() {
-		return feedItemId;
-	}
 
-	public void setFeedItemId(String feedItemId) {
-		this.feedItemId = feedItemId;
-	}
+    public final static String searchByFeedIdAndFeedItemId = "fr.feedreader.models.FeedItem.searchByFeedIdAndFeedItemId";
+    public final static String findAllByFeedId = "fr.feedreader.models.FeedItem.findAllByFeedId";
+    public final static String countByFeedId = "fr.feedreader.models.FeedItem.count";
 
-	public String getTitle() {
-		return title;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    private String feedItemId;
+    private String title;
+    private String link;
+    private String enclosure;
 
-	public String getLink() {
-		return link;
-	}
+    @Column(length = 32768)
+    private String summary;
 
-	public void setLink(String link) {
-		this.link = link;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updated;
 
-	public String getSummary() {
-		return summary;
-	}
+    @ManyToOne
+    private Feed feed;
 
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
+    private Boolean readed = null;
 
-	public Integer getId() {
-		return id;
-	}
+    public String getFeedItemId() {
+        return feedItemId;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public void setFeedItemId(String feedItemId) {
+        this.feedItemId = feedItemId;
+    }
 
-	public Feed getFeed() {
-		return feed;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setFeed(Feed feed) {
-		this.feed = feed;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public Date getUpdated() {
-		return updated;
-	}
+    public String getLink() {
+        return link;
+    }
 
-	public void setUpdated(Date updated) {
-		this.updated = updated;
-	}
+    public void setLink(String link) {
+        this.link = link;
+    }
 
-	public Boolean getReaded() {
-		if (readed == null) {
-			readed = Boolean.FALSE;
-		}
-		return readed;
-	}
+    public String getSummary() {
+        return summary;
+    }
 
-	public void setReaded(Boolean readed) {
-		this.readed = readed;
-	}
-	
-	public String getEnclosure() {
-		return enclosure;
-	}
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
 
-	public void setEnclosure(String enclosure) {
-		this.enclosure = enclosure;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof FeedItem) {
-			return ((FeedItem)obj).getFeedItemId().equals(getFeedItemId());
-		}
-		return false;
-	}
-	
-	
-	
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Feed getFeed() {
+        return feed;
+    }
+
+    public void setFeed(Feed feed) {
+        this.feed = feed;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public Boolean getReaded() {
+        if (readed == null) {
+            readed = Boolean.FALSE;
+        }
+        return readed;
+    }
+
+    public void setReaded(Boolean readed) {
+        this.readed = readed;
+    }
+
+    public String getEnclosure() {
+        return enclosure;
+    }
+
+    public void setEnclosure(String enclosure) {
+        this.enclosure = enclosure;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof FeedItem) {
+            return ((FeedItem) obj).getFeedItemId().equals(getFeedItemId());
+        }
+        return false;
+    }
+
 }
