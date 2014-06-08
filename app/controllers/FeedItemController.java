@@ -75,7 +75,11 @@ public class FeedItemController extends Controller {
         feedItemJson.put("readed", feedItem.getReaded());
         feedItemJson.put("summary", feedItem.getSummary());
         feedItemJson.put("title", feedItem.getTitle());
-        feedItemJson.put("updated", feedItem.getUpdated().getTime());
+        if (feedItem.getUpdated() != null) {
+            feedItemJson.put("updated", feedItem.getUpdated().getTime());
+        } else {
+            feedItemJson.put("updated", "null");
+        }
         ObjectNode url = Json.newObject();
         feedItemJson.put("url", url);
         url.put("toRead", routes.FeedItemController.setReadedTrue(feedItem.getId()).toString());
