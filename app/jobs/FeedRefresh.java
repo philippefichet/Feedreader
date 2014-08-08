@@ -5,21 +5,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import controllers.LiveController;
 import fr.feedreader.buisness.FeedBuisness;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import akka.actor.UntypedActor;
 import play.db.jpa.JPA;
-import play.libs.Akka;
 import play.libs.F;
-import play.libs.WS;
 
 public class FeedRefresh extends UntypedActor {
 

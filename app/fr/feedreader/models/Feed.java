@@ -11,6 +11,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @NamedQueries({
@@ -31,6 +33,7 @@ public class Feed {
 	@OrderBy(value="updated DESC")
 	private List<FeedItem> feedItems;
 	
+    @Temporal(TemporalType.TIMESTAMP)
     private Date lastUpdate;
     
 	private Boolean enable = Boolean.TRUE;

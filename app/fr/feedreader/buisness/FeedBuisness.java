@@ -1,10 +1,8 @@
 package fr.feedreader.buisness;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -20,13 +18,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
-import play.db.jpa.JPA;
-import scala.Proxy.Typed;
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import fr.feedreader.models.FeedUnreadCounter;
 import java.util.Date;
-import java.util.function.Consumer;
 
 public class FeedBuisness {
 
@@ -75,7 +70,8 @@ public class FeedBuisness {
                 query.setParameter("feedItemId", feedItem.getFeedItemId());
                 try {
                     FeedItem existing = query.getSingleResult();
-                    if (existing.getUpdated().before(feedItem.getUpdated())) {
+                    // Mise a jour d'article existant
+                    if (existing.getUpdated() != null && feedItem.getUpdated() != null && existing.getUpdated().before(feedItem.getUpdated())) {
                         updatedFeedItem.add(existing);
                         existing.setReaded(false);
                     }
@@ -85,6 +81,7 @@ public class FeedBuisness {
                     existing.setUpdated(feedItem.getUpdated());
                     existing.setEnclosure(feedItem.getEnclosure());
                     FeedItemBuisness.update(em, existing);
+                // Nouveau articles
                 } catch (NoResultException e) {
                     feedItem.setFeed(feed);
                     feedItem.setReaded(false);
@@ -137,7 +134,11 @@ public class FeedBuisness {
             lastItemQuery.setMaxResults(1);
             try {
                 FeedItem feedItem = lastItemQuery.getSingleResult();
-                logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : " + feedItem.getUpdated().toString());
+                if (feedItem.getUpdated() != null) {
+                    logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : " + feedItem.getUpdated().toString());
+                } else {
+                    logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : null");
+                }
 
                 // Récupération des de nouveau article 
                 List<FeedItem> feedItems = refreshFeedItems(em, feed.getId());

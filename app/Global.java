@@ -74,7 +74,7 @@ public class Global extends GlobalSettings {
 			if (feedResfreshExecution == null) {
 				feedResfreshExecution = 15L;
 			}
-			ActorRef feedActor = Akka.system().actorOf(new Props(FeedRefresh.class));
+			ActorRef feedActor = Akka.system().actorOf(Props.create(FeedRefresh.class));
 			Akka.system().scheduler().schedule(
 				Duration.create(feedResfreshStart, TimeUnit.MILLISECONDS),
 				Duration.create(feedResfreshExecution, TimeUnit.MINUTES),

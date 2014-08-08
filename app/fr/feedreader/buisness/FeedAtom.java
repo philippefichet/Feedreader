@@ -13,7 +13,19 @@ import org.xml.sax.helpers.DefaultHandler;
 import fr.feedreader.models.FeedItem;
 
 public class FeedAtom extends FeedAbstract {
-	
+
+//    private static final String CONTENT_TYPE_HTML = "html";
+//    private static final String CONTENT_TYPE_XHTML = "xhtml";
+//    private static final String CONTENT_TYPE_TEXT = "text";
+//    
+//    private static final String TAG_ENTRY = "entry";
+//    private static final String TAG_LINK = "link";
+//    private static final String TAG_CONTENT = "content";
+//    
+//    private static final String ATTRIBUTE_REL = "rel";
+//    private static final String ATTRIBUTE_HREF = "href";
+
+    
     /**
      * Receive notification of the start of an element.
      *
@@ -49,7 +61,7 @@ public class FeedAtom extends FeedAbstract {
         } else if(qName.equalsIgnoreCase("link") && currentFeedItem != null) {
         	String rel = attributes.getValue("rel");
         	String href = attributes.getValue("href");
-        	if (rel.equals("alternate")) {
+        	if (rel == null || rel.equals("alternate")) {
             	currentFeedItem.setLink(href);
         	} else if(rel.equals("enclosure")) {
         		currentFeedItem.setEnclosure(href);
@@ -100,6 +112,9 @@ public class FeedAtom extends FeedAbstract {
 	    	} catch (ParseException parseException) {
 	    		LoggerFactory.getLogger(getClass()).warn("Impossible de parser la date \"" + currentData + "\"");
 	    	}
+	    } else if(localName.equals("content")) {
+//            currentFeedItem.setContent(currentData);
+//	    	System.out.println(" - " + qName);
 	    } else if(currentFeedItem != null) {
 //	    	System.out.println(" - " + qName);
 	    } 

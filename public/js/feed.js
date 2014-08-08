@@ -1,6 +1,10 @@
 // AngularJS
 var FeedReader = angular.module('FeedReader', ['ngSanitize']);
 
+FeedReader.filter("feedItemData", function() {
+    
+});
+
 FeedReader.controller('FeedController', function($scope, $http, $window) {
     $scope.error = null;
     $scope.feeds = [];
@@ -20,6 +24,29 @@ FeedReader.controller('FeedController', function($scope, $http, $window) {
             "unread": 0,
             "sync": false
         })
+    }
+    
+    /**
+     * Formate une date à partir d'un timestamps
+     * @param timestamps timestamps à utiliser comme date
+     * @returns Date formaté
+     */
+    $scope.dateformat = function(timestamps) {
+        if (timestamps == null) {
+            return null;
+        }
+        var date = new Date(timestamps);
+        // 2014-05-12 09:12:48
+        var format = date.getFullYear() + "-";
+        if (date.getMonth() < 10) {
+            format += "0";
+        }
+        format += date.getMonth() + "-";
+        if (date.getDay() < 10) {
+            format += "0";
+        }
+        format += date.getDay();
+        return format;
     }
 
     /**

@@ -2,6 +2,10 @@ name := """feedreaderplay"""
 
 version := "1.0-SNAPSHOT"
 
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
+
+scalaVersion := "2.11.1"
+
 libraryDependencies ++= Seq(
   // Select Play modules
   jdbc,      // The JDBC connection pool and the play.api.db API
@@ -11,9 +15,12 @@ libraryDependencies ++= Seq(
   javaJpa,   // Java JPA plugin
   //filters,   // A set of built-in filters
   javaCore,  // The core Java API
+  javaWs, // Webservice Java
   // WebJars pull in client-side web libraries
-  "org.webjars" %% "webjars-play" % "2.2.1-2",
-  "org.hibernate" % "hibernate-entitymanager" % "4.3.4.Final",
+  "org.webjars" %% "webjars-play" % "2.3.0",
+  //"org.hibernate" % "hibernate-entitymanager" % "4.3.4.Final",
+  "org.eclipse.persistence" % "eclipselink" % "2.4.2",
+  "mysql" % "mysql-connector-java" % "5.1.31",
   "com.h2database" % "h2" % "1.3.175",
   "org.hsqldb" % "hsqldb" % "2.3.2",
   //"org.apache.httpcomponents" % "httpclient" % "4.3.2",
@@ -40,5 +47,3 @@ libraryDependencies ++= Seq(
   // Add your own project dependencies in the form:
   // "group" % "artifact" % "version"
 )
-
-play.Project.playScalaSettings
