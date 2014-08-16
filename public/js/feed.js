@@ -2,7 +2,30 @@
 var FeedReader = angular.module('FeedReader', ['ngSanitize']);
 
 FeedReader.filter("feedItemData", function() {
-    
+    return function(input) {
+        console.log("feedItemData", input);
+        if (input == null || input == undefined || isNaN(input)) {
+            return "";
+        }
+        var date = new Date(input);
+        var month = date.getMonth();
+        if (month < 10) {
+            month = "0" + month
+        }
+        var day = date.getDay();
+        if (day < 10) {
+            day = "0" + day
+        }
+        var hours = date.getHours();
+        if (hours < 10) {
+            hours = "0" + hours
+        }
+        var minutes = date.getMinutes();
+        if (minutes < 10) {
+            minutes = "0" + minutes
+        }
+        return "(" + date.getFullYear() + "-" + month + "-" + day + " " + hours + ":" + minutes + ")";
+    }
 });
 
 FeedReader.controller('FeedController', function($scope, $http, $window) {
