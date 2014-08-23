@@ -29,6 +29,8 @@ public class AdminController extends Controller {
             try {
                 conf.WebJarsFiles.locate(bootswatch[0] + "/css/bootstrap.min.css");
                 Application.getInstance().setBootswatch(bootswatch[0]);
+                Application.getInstance().save();
+                
             } catch (IllegalArgumentException e) {
                 errors.put("bootswatch", e.getLocalizedMessage());
             }

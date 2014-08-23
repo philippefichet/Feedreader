@@ -12,6 +12,7 @@ import play.api.libs.Files;
 import play.libs.Json;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import play.Play;
 
 public class Application {
 	protected Logger logger = LoggerFactory.getLogger(getClass());
@@ -37,6 +38,7 @@ public class Application {
 		bootswatchAvailable.put("superhero", "bootswatch-superhero/3.1.1");
 		bootswatchAvailable.put("united", "bootswatch-united/3.1.1");
 		bootswatchAvailable.put("yeti", "bootswatch-yeti/3.1.1");
+        load();
 	}
 
 	static public synchronized Application getInstance() {
@@ -46,7 +48,8 @@ public class Application {
 		return instance;
 	}
 	
-	public void loadFromPath(String path) {
+	public void load() {
+        String path = getHomeConfiguration();
 		File pathfile = new File(path);
 		if (!pathfile.exists()) {
 			logger.warn("la Configuration de l'application est inexistante : \""
@@ -81,9 +84,30 @@ public class Application {
 		}
 		
 	}
-
+    
+    /**
+     * Récupére le chemin de la configuration de l'application (pas du play
+     * framework)
+     *
+     * @param app Application lancé
+     * @return Chemin de la configuration de l'application (pas du play
+     * framework)
+     */
+    public String getHomeConfiguration() {
+        String application =  Play.application().configuration().getString(
+                "configuration.application");
+        if (application == null) {
+            String userDir = System.getProperty("user.dir") + File.separator;
+            if (userDir == null) {
+                userDir = "~/";
+            }
+            application = userDir + ".feedreader/application.json";
+        }
+        return application;
+    }
 	
-	public void saveFromPath(String path) {
+	public void save() {
+        String path = getHomeConfiguration();
 		File pathfile = new File(path);
 		if (!pathfile.canWrite()) {
 			logger.error("Impossible d'ecrire la configuration de l'application \"" + pathfile.getAbsolutePath() + "\"");

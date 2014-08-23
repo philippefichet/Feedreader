@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GuildWars2.com</title>
+	<atom:link href="https://www.guildwars2.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.guildwars2.com</link>
+	<description></description>
+	<lastBuildDate>Fri, 18 Apr 2014 00:01:59 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.5.2</generator>
+		<item>
+		<title>Mise à jour du Tournoi des&#160;légendes</title>
+		<link>https://www.guildwars2.com/fr/news/tournament-of-legends-update/</link>
+		<comments>https://www.guildwars2.com/fr/news/tournament-of-legends-update/#comments</comments>
+		<pubDate>Fri, 18 Apr 2014 00:01:59 +0000</pubDate>
+		<dc:creator>John Corpening</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=13133</guid>
+		<description><![CDATA[Tout l'essentiel sur la mise à jour du Tournoi des légendes&#160;!</p><p class="more"><a href="https://www.guildwars2.com/fr/news/tournament-of-legends-update/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Merci pour votre participation massive au Tournoi des légendes !</p>
+<p>Plus de 200 équipes se sont inscrites pour avoir la chance de remporter une arme légendaire ! Le soutien de la communauté a été tel que nous avons décidé, en collaboration avec <a target="_blank" href="http://mistpedia.net/">Mistpedia</a> (les organisateurs du tournoi) d&rsquo;augmenter le nombre d&rsquo;équipes éligibles. En conséquent, nous avons quelques changements à annoncer.</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/e84bb01-TOL.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/e84bb01-TOL-590x331.jpg" alt="01-TOL" width="590" height="331" class="alignnone size-large wp-image-13135" /></a></p>
+<p>Le tournoi devait à l&rsquo;origine accueillir 16 équipes par région ; ce sont désormais 64 équipes par région qui participeront au tournoi, pour un total de 128 équipes. Pour accueillir convenablement les nouvelles équipes, nous avons ajouté deux manches. Les vainqueurs des manches de 32 et 64 équipes seront déterminés à l&rsquo;issue d&rsquo;une seule partie afin de donner le temps aux joueurs de finir les manches. Le Tournoi commencera également à des heures différentes pour que tout se déroule comme prévu. Pour l&rsquo;Europe, le Tournoi commence désormais à midi heure de Paris et pour l&rsquo;Amérique du Nord, à midi heure de l&rsquo;Est. Les heures de diffusion restent&nbsp;identiques.</p>
+<p>Nous avons également ajouté plus de prix pour récompenser les 32 meilleures équipes. Les équipes de la 9e à la 16e place recevront 77 trèfles mystiques, et les 32 meilleures équipes recevront toutes le coup de grâce du lama.</p>
+<p>Le taux élevé de participation au tournoi nous a convaincus d&rsquo;organiser un autre Tournoi des légendes en juin ou juillet. Nous n&rsquo;avons pas finalisé les détails de ce prochain tournoi, mais soyez assurés que nous faisons notre possible pour l&rsquo;organiser. Commencez dès aujourd&rsquo;hui à former vos équipes et à vous entraîner ! Pour le prochain tournoi, nous essaierons d&rsquo;inclure davantage d&rsquo;équipes. Si vous n&rsquo;avez pas réussi à participer cette fois-ci, rien n&rsquo;est perdu !</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/fcce402-TOL.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/fcce402-TOL-590x331.jpg" alt="02-TOL" width="590" height="331" class="alignnone size-large wp-image-13134" /></a></p>
+<p>Avant de vous quitter, j&rsquo;aimerais remercier tout particulièrement Mid-Atlantic Kombat et ESL Guild Wars 2 pour l&rsquo;aide qu&rsquo;ils ont apportée à l&rsquo;équipe de Mistpedia afin de couvrir toutes les équipes additionnelles. C&rsquo;est vous qui faites de notre communauté ce qu&rsquo;elle est !</p>
+<p>À bientôt en jeu !</p>
+<p>- John</p>
+<h3>Mise à jour des informations sur le Tournoi des légendes</h3>
+<h4>Dates :</h4>
+<p><strong>Tournoi des légendes européen, 26 et 27 avril</strong><br />
+La partie commence à midi heure de Paris.<br />
+La diffusion commence à 16 h heure de Paris, ou 10 h heure de l&rsquo;Est.</p>
+<p><strong>Tournoi des légendes nord-américain, 3 et 4 mai</strong><br />
+La partie commence à midi heure de l&rsquo;Est.<br />
+La diffusion commence à 16 h heure de l&rsquo;Est ou 22 h heure de Paris.</p>
+<h4>Taille de l&rsquo;équipe :</h4>
+<p>5</p>
+<h4>Format :</h4>
+<p>Ce Tournoi est à élimination directe. Les vainqueurs des manches 1 et 2 seront déterminés à l&rsquo;issue d&rsquo;une seule partie. Les vainqueurs des manches 3 à 5 seront déterminés à l&rsquo;issue de trois parties, et ceux des finales seront déterminés à l&rsquo;issue de cinq parties. Le Tournoi aura lieu pendant des week-ends différents pour les deux régions.</p>
+<h4>Rotation des cartes :</h4>
+<ul>
+<li>Étape 1 : Temple de la Tempête silencieuse</li>
+<li>Étape 2 : Forêt de Niflhel</li>
+<li>Étape 3 : Forêt de Niflhel, Héritage du Feu belligérant, Bataille de Kyhlo</li>
+<li>Étape 4 : Temple de la Tempête silencieuse, Forêt de Niflhel, Héritage du Feu belligérant</li>
+<li>Étape 5 : Héritage du Feu belligérant, Bataille de Kyhlo, Temple de la Tempête silencieuse</li>
+<li>Étape 6 : Forêt de Niflhel, Héritage du Feu belligérant, Bataille de Kyhlo, Temple de la Tempête silencieuse, Héritage du Feu belligérant</li>
+</ul>
+<h4>Récompenses du Tournoi :</h4>
+<p>les récompenses sont indiquées pour un joueur</p>
+<ul>
+<li>1<sup>re</sup> place : Arme légendaire au choix (sauf Éternité), 2 000 gemmes, 2 billets d&rsquo;arme du Lion noir, coup de grâce du lama</li>
+<li>2<sup>e</sup> place : Don de maîtrise ou de fortune au choix, précurseur au choix, 800 gemmes, 1 billet d&rsquo;arme du Lion noir, coup de grâce du lama</li>
+<li>3<sup>e</sup> et 4<sup>e</sup> place : Don de maîtrise ou de fortune au choix, 1 billet d&rsquo;arme du Lion noir, coup de grâce du lama</li>
+<li>De la 5<sup>e</sup> à la 8<sup>e</sup> place : Don de maîtrise ou de pouvoir au choix, 1 billet d&rsquo;arme du Lion noir, coup de grâce du lama</li>
+<li>De la 9<sup>e</sup> à la 16<sup>e</sup> place : 77 trèfles mystiques, coup de grâce du lama</li>
+<li>De la 17<sup>e</sup> à la 32<sup>e</sup> place : Coup de grâce du lama</li>
+</ul>
+<h4>Règles du tournoi :</h4>
+<ul>
+<li>Un remplaçant est autorisé pour chaque équipe, et ce remplaçant n&rsquo;aura pas le droit de jouer pour une autre équipe.</li>
+<li>Les équipes sont autorisées à utiliser un remplacement uniquement si un joueur de la liste est dans l&rsquo;impossibilité de participer. Les remplacements ne peuvent pas être utilisés dans un but stratégique. Seuls les joueurs qui participent aux finales recevront les prix.</li>
+<li>Si un joueur a été déconnecté pendant une partie de tournoi, le jeu doit continuer. La partie ne sera pas relancée.
+<ul>
+<li>Si tous les joueurs sont déconnectés suite à un plantage de serveur ou à un autre incident, le match recommencera.</li>
+<li>Le jeu commence une fois que tous les joueurs ont appuyé sur le bouton Prêt, ou lorsque l&rsquo;arbitre lance la partie manuellement. Les arbitres lancent le match manuellement une fois que tous les joueurs ont accédé à la carte et qu&rsquo;il leur a été demandé de quitter le mode spectateur.</li>
+<li>Si tous les joueurs ne sont pas présents et prêts à l&rsquo;heure du début annoncé de la partie, les arbitres n&rsquo;attendent pas plus de 5 minutes.</li>
+<li>En cas d&rsquo;égalité, l&rsquo;équipe ayant le score de joueur cumulé le plus élevé est déclarée&nbsp;gagnante.</li>
+</ul>
+</li>
+</ul>
+<h4>Équipes et pools :</h4>
+<p>Rendez-vous sur Mistpedia pour consulter la liste mise à jour des équipes et des pools.<br />
+<a href="http://mistpedia.net/mediawiki/index.php/Tournament_of_Legends">http://mistpedia.net/mediawiki/index.php/Tournament_of_Legends</a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/tournament-of-legends-update/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Charges de transmutation gratuites, nouvelles armures&#8230; Le plein de nouveautés dans la boutique aux gemmes&#160;!</title>
+		<link>https://www.guildwars2.com/fr/news/free-transmutation-charges-new-armors-and-more-in-the-gem-store/</link>
+		<comments>https://www.guildwars2.com/fr/news/free-transmutation-charges-new-armors-and-more-in-the-gem-store/#comments</comments>
+		<pubDate>Tue, 15 Apr 2014 00:02:40 +0000</pubDate>
+		<dc:creator>Evon Gnashblade</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=13077</guid>
+		<description><![CDATA[Le pack de fonctionnalités d'avril 2014 est disponible&#160;! Profitez de nouvelles fonctionnalités en pagaille, de nouveaux objets de la Compagnie commerciale du Lion noir et de cinq charges de transmutation gratuites&#160;!</p><p class="more"><a href="https://www.guildwars2.com/fr/news/free-transmutation-charges-new-armors-and-more-in-the-gem-store/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<div id="commerce-intro">
+<div class="copy">
+<p>La Compagnie commerciale du Lion noir a travaillé dur pour pouvoir vous présenter de fantastiques nouveautés pour votre inventaire. Nous sommes heureux de vous proposer trois apparences d&rsquo;armures inédites, cinq charges de transmutation gratuites à partir d&rsquo;aujourd&rsquo;hui et jusqu&rsquo;au jeudi 17 avril à 8&nbsp;h&nbsp;59, heure de Paris (mercredi 16 avril à 23&nbsp;h&nbsp;59, heure du Pacifique), et bien plus encore&nbsp;!</p>
+<p><img width="189" height="45" class="size-full wp-image-3497" title="signature" alt="" src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2012/10/signature.png"></div>
+<div class="featured"><img width="213" height="341" src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2012/10/black-flag.png" /></div>
+</div>
+<div id="commerce-items">
+<ul>
+<li class="yui3-g">
+<div class="yui3-u-1-2 image-container screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/44afa01-Prof3-1920x1080.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/3da9501-Prof3-275x275.jpg" alt="" /></a></div>
+<div class="yui3-u-1 text-container">
+<h3>Nouveauté&nbsp;: armures des remparts, de randonneur et incarnées&nbsp;!</h3>
+<p>
+        Ces nouvelles apparences d&rsquo;armures étincelantes vous conféreront un confort et une élégance sans pareil&nbsp;! Gardez votre panache même au plus fort du combat&nbsp;!
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1 text-container">
+<h3>En cadeau&nbsp;: des charges de transmutation&nbsp;!</h3>
+<p>
+        Pour accompagner la mise en place du système de garde-robe, la Compagnie commerciale du Lion noir vous offre cinq charges de transmutation gratuites&nbsp;! Faites vite&nbsp;! Vous avez jusqu’au jeudi 17 avril à 8&nbsp;h&nbsp;59, heure de Paris (mercredi 16 avril à 23&nbsp;h&nbsp;59, heure du Pacifique) pour récupérer vos charges gratuites&nbsp;!
+    </p>
+</div>
+<div class="yui3-u-1-2 image-container screenshot"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/9853502-TransmutationChargeLarge-170x170.jpg" alt="" /></div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1-2 image-container screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/a3ed303-Outfit-2-1920x1080.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/785b703-Outfit-2-275x155.jpg" alt="" /></a></div>
+<div class="yui3-u-1 text-container">
+<h3>Tenue d'hiver élégante</h3>
+<p>
+        Où que vous alliez, emportez avec vous un peu de l&rsquo;esprit de l&rsquo;hiver&nbsp;!  Comme vous pouvez désormais porter vos tenues en combat, nous avons décidé de ressortir vos modèles favoris&nbsp;! En exclusivité cette semaine, vous pouvez obtenir la tenue d&rsquo;hiver élégante.
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1 text-container">
+<h3>En cadeau&nbsp;: accès express à la banque&nbsp;!</h3>
+<p>
+        Nous offrons un accès express à la banque gratuit par compte&nbsp;! Vous pourrez ainsi profiter des services de votre banque à tout&nbsp;moment&nbsp;!
+    </p>
+</div>
+<div class="yui3-u-1-2 image-container screenshot"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/ebb6604-AsuranBankPortalLarge-170x170.jpg" alt="" /></div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1-2 image-container screenshot"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/749d105-InstantRepairCanisterLarge-170x170.jpg" alt="" /></div>
+<div class="yui3-u-1 text-container">
+<h3>Promotion permanente&nbsp;: kit de réparation instantanée&nbsp;!</h3>
+<p>
+        Réparer son armure ne vous coûtera désormais plus rien&nbsp;! Vos kits de réparation instantanée à portée de main, vous ne perdrez plus de temps pour vos réparations. Pour accompagner la fin des coûts de réparation d&rsquo;armure, nous baissons le prix des kits de réparation à seulement 35 gemmes&nbsp;l&rsquo;unité&nbsp;!
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1 text-container">
+<h3>Dernière chance</h3>
+<p>
+        Il ne vous reste plus qu&rsquo;une semaine pour obtenir l&rsquo;outil de bûcheron de la guêpe de givre et le kit de teintures des survivants de l&rsquo;Arche du Lion&nbsp;!
+    </p>
+</div>
+<div class="yui3-u-1-2 image-container screenshot"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/f30be06-FrostWaspLoggingAxeLarge-170x170.jpg" alt="" /></div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1">
+<h3>Disponibles dès aujourd'hui dans la Boutique aux gemmes&nbsp;!</h3>
+<p>Connectez-vous à <em>Guild&nbsp;Wars&nbsp;2</em> et appuyez sur &laquo;&nbsp;O&nbsp;&raquo; pour accéder à la Compagnie commerciale du Lion noir, profiter de ces offres et bien plus encore&nbsp;!</p>
+</div>
+</li>
+</ul>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/free-transmutation-charges-new-armors-and-more-in-the-gem-store/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Notes de version pour le pack de fonctionnalités d&#8217;avril 2014</title>
+		<link>https://www.guildwars2.com/fr/news/release-notes-for-the-april-2014-feature-pack/</link>
+		<comments>https://www.guildwars2.com/fr/news/release-notes-for-the-april-2014-feature-pack/#comments</comments>
+		<pubDate>Tue, 15 Apr 2014 00:01:22 +0000</pubDate>
+		<dc:creator>The Guild Wars 2 Team</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=13069</guid>
+		<description><![CDATA[Le pack de fonctionnalités d'avril 2014 est disponible ! Lisez les notes de version de la mise à jour.</p><p class="more"><a href="https://www.guildwars2.com/fr/news/release-notes-for-the-april-2014-feature-pack/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Le pack de fonctionnalités d&rsquo;avril 2014 est disponible ! Connectez-vous pour découvrir <em>Guild&nbsp;Wars&nbsp;2</em> comme vous ne l&rsquo;avez encore jamais vu ! Vous trouverez tous les détails sur la <a href="/fr/the-game/releases/feature-packs/">page dédiée à la mise à jour du pack de fonctionnalités</a>. Consultez également nos forums pour lire les <a href="https://forum-fr.guildwars2.com/forum/info/updates/Mise-jour-du-jeu-15-avril-2014">notes de version</a> !</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/release-notes-for-the-april-2014-feature-pack/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Connectez-vous demain pour recevoir des charges de transmutation gratuites</title>
+		<link>https://www.guildwars2.com/fr/news/log-in-tomorrow-for-free-transmutation-charges/</link>
+		<comments>https://www.guildwars2.com/fr/news/log-in-tomorrow-for-free-transmutation-charges/#comments</comments>
+		<pubDate>Mon, 14 Apr 2014 01:00:12 +0000</pubDate>
+		<dc:creator>The Guild Wars 2 Team</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=13061</guid>
+		<description><![CDATA[Faites vite&#160;! Après la sortie du Pack de fonctionnalités, vous n'avez qu'une journée pour récupérer vos cinq charges gratuites&#160;!</p><p class="more"><a href="https://www.guildwars2.com/fr/news/log-in-tomorrow-for-free-transmutation-charges/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Le pack de fonctionnalités d&rsquo;avril 2014 est disponible dès demain&nbsp;! Parmi les nombreuses nouveautés que nous vous proposerons, le système de «&nbsp;Garde-robe de compte&nbsp;» vous permettra de collectionner plus facilement toutes les apparences de la Tyrie&nbsp;! Grâce à la garde-robe, toutes les apparences que vous récupérez seront accessibles pour tous les personnages de votre compte.</p>
+<p>Pour accompagner la mise en place de ce nouveau système, nous offrons cinq charges de transmutation gratuites par compte aux joueurs qui se connectent entre le lancement du Pack de fonctionnalités et le jeudi 17 avril à 8&nbsp;h&nbsp;59, heure de Paris (mercredi 16 avril à 23&nbsp;h&nbsp;59, heure du Pacifique)&nbsp;! Consultez l&rsquo;onglet Promotions de la boutique aux gemmes pour profiter de toutes les&nbsp;offres&nbsp;!</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/03/496d5Wardrobe-1.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/03/496d5Wardrobe-1-590x331.jpg" alt="Wardrobe-1" width="590" height="331" class="alignnone size-large wp-image-12752" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/log-in-tomorrow-for-free-transmutation-charges/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Économisez 20&#160;% sur les emplacements de personnage supplémentaires&#160;!</title>
+		<link>https://www.guildwars2.com/fr/news/save-20-percent-on-character-slot-expansions/</link>
+		<comments>https://www.guildwars2.com/fr/news/save-20-percent-on-character-slot-expansions/#comments</comments>
+		<pubDate>Wed, 09 Apr 2014 02:00:50 +0000</pubDate>
+		<dc:creator>The Guild Wars 2 Team</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=13024</guid>
+		<description><![CDATA[Du mercredi 9 au mercredi 16 avril, Evon Grincelame tranche les prix des emplacements de personnage supplémentaires ! Rendez-vous dans la section &#171;&#160;Améliorations&#160;&#187; de la Boutique aux gemmes pour...</p><p class="more"><a href="https://www.guildwars2.com/fr/news/save-20-percent-on-character-slot-expansions/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Du mercredi 9 au mercredi 16 avril, Evon Grincelame tranche les prix des emplacements de personnage supplémentaires ! Rendez-vous dans la section &laquo;&nbsp;Améliorations&nbsp;&raquo; de la Boutique aux gemmes pour bénéficier de 20 % de réduction.</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/abb9aExpansion-Slot-1.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/abb9aExpansion-Slot-1-590x331.jpg" alt="Expansion-Slot-1" width="590" height="331" class="alignnone size-large wp-image-13025" /></a></p>
+<p>Connectez-vous à <em>Guild&nbsp;Wars&nbsp;2</em> et appuyez sur &laquo;&nbsp;O&nbsp;&raquo; pour accéder à la Compagnie commerciale du Lion noir et profiter de cette offre exceptionnelle !</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/save-20-percent-on-character-slot-expansions/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Découvrez le nouveau tambour&#160;!</title>
+		<link>https://www.guildwars2.com/fr/news/introducing-the-new-drum-instrument/</link>
+		<comments>https://www.guildwars2.com/fr/news/introducing-the-new-drum-instrument/#comments</comments>
+		<pubDate>Wed, 09 Apr 2014 01:05:48 +0000</pubDate>
+		<dc:creator>Aaron McLeran</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=13013</guid>
+		<description><![CDATA[Aaron McLeran, programmeur audio, présente en détail le tambour mélodieux&#160;!</p><p class="more"><a href="https://www.guildwars2.com/fr/news/introducing-the-new-drum-instrument/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Salut à tous les mélomanes de <em>Guild&nbsp;Wars&nbsp;2</em> ! Je suis Aaron McLeran, le programmeur audio d&rsquo;ArenaNet. Je suis là pour vous en dire un peu plus sur le nouveau tambour disponible en ce moment à la Compagnie commerciale du Lion noir.</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/1ea72Drum-1.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/1ea72Drum-1-590x331.jpg" alt="Drum-1" width="590" height="331" class="alignnone size-large wp-image-13018" /></a></p>
+<h3>Jouer ensemble, à l&rsquo;unisson</h3>
+<p>Ce tambour saisit une partie de la magie obtenue en jouant de la musique à plusieurs, et c&rsquo;est pour ça que nous l&rsquo;adorons ! La musique jouée par les autres tambours est en harmonie avec la vôtre. De plus, il est facile d&rsquo;en jouer : pas la peine d&rsquo;être musicien ou de savoir lire une partition pour créer un rythme qui balance !</p>
+<p>Alors, comment ça marche ? Nous avons créé deux modes de percussion : un <strong>mode de pistes préenregistrées</strong> et un <strong>mode de pistes d&rsquo;utilisateur</strong>.</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/e6a65preset-groove.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/e6a65preset-groove-590x97.jpg" alt="preset-groove" width="590" height="97" class="alignnone size-large wp-image-13016" /></a></p>
+<h3>Pistes préenregistrées</h3>
+<p>Le mode de pistes préenregistrées contient cinq grooves de percussion qui sont joués en temps réel par votre tambour. Ils ont été composés pour pouvoir être utilisés au combat au sein d&rsquo;un grand groupe de joueurs, mais aussi comme base en solo. Pour faire un solo avec une piste préenregistrée, il vous suffit de cliquer sur les boutons de compétence solo pour créer une séquence qui s&rsquo;adaptera toujours au contexte de la piste en cours. Vous pouvez également faire un solo lorsque vous n&rsquo;êtes pas en train de jouer une piste, ce qui est pratique pour pouvoir accompagner quelqu&rsquo;un qui joue déjà une piste prédéfinie. Rien que ça ! Qui veut être le premier à faire du slam dans <em>Guild&nbsp;Wars&nbsp;2</em> ?</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/467aduser-groove-1.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/467aduser-groove-1-590x97.jpg" alt="user-groove-1" width="590" height="97" class="alignnone size-large wp-image-13017" /></a></p>
+<h3>Pistes d&rsquo;utilisateur</h3>
+<p>Le mode de pistes d&rsquo;utilisateur est un peu plus complexe. Pour commencer, les cinq premiers boutons de compétence comptent chacun cinq sons de percussion uniques. Chaque échantillon peut être déclenché individuellement pour que vous puissiez jouer du tambour comme de n&rsquo;importe quel autre instrument en jeu libre. La seule différence, c&rsquo;est que le tambour va harmoniser les battements pour qu&rsquo;ils soient toujours agréables à l&rsquo;oreille&#8230; et en rythme.  Si vous cliquez sur le sixième ou le septième emplacement de compétence, le tambour passe en mode « enregistrement en boucle ». La première fois, vous entendrez un léger bruit de métronome (il n&rsquo;y a que vous qui pouvez l&rsquo;entendre !) pour vous donner une idée de la pulsation « générale ». Faites comme si c&rsquo;était un signal d&rsquo;entrée : « Et un, et deux, et un deux trois quatre ! » Quand vous cliquez à nouveau sur les boutons de compétence d&rsquo;échantillons de percussion, ils se bouclent sur eux-mêmes. Vous pouvez créer des pistes toujours plus complexes, aux styles variés.  Plutôt pas mal, hein ?</p>
+<p>Vous pouvez évidemment passer d&rsquo;un mode à l&rsquo;autre pour alterner entre les préenregistrements et vos créations. Si vous passez à un groove différent, celui-ci jouera la piste au bon moment de la phrase musicale, afin que vous puissiez « remixer » les pistes autant que vous le voulez. Et vous pouvez aussi faire un solo par-dessus vos boucles !</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/e5cceDrum-2.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/e5cceDrum-2-590x331.jpg" alt="Drum-2" width="590" height="331" class="alignnone size-large wp-image-13015" /></a></p>
+<h3>Mises en garde</h3>
+<p>Ce tambour a beau être incroyable, il est limité par la technologie. D&rsquo;abord, votre boucle d&rsquo;utilisateur ne sera pas sauvegardée au-delà de la carte sur laquelle vous vous trouvez, donc si vous rejoignez une carte, vos boucles d&rsquo;utilisateur seront perdues. En effet, les données de votre boucle ne sont pas sauvegardées dans l&rsquo;historique de votre personnage, ni sur votre disque dur.  Nous explorons certaines alternatives qui nous permettraient de changer cela par la suite, mais en attendant, nous ne pensons pas que ce soit un problème majeur, car créer de nouvelles boucles d&rsquo;utilisateur est à la fois amusant et si facile !</p>
+<p>D&rsquo;autre part, la piste que vous créez n&rsquo;aura peut-être pas tout à fait le même rendu sur l&rsquo;ordinateur de quelqu&rsquo;un d&rsquo;autre. C&rsquo;est à cause du processus de « quantification » appliqué sur le client pour un rendu plus agréable. Si la durée de latence est plus importante que la quantification, vous entendrez les morceaux de vos amis en décalage par rapport à ce qu&rsquo;ils auront réellement joué sur leur ordinateur. Malheureusement, il est impossible de savoir à l&rsquo;avance ce que quelqu&rsquo;un jouera et de transmettre cette information instantanément. La meilleure option reste de quantifier l&rsquo;événement pour que vous l&rsquo;entendiez vous-même correctement.  Nous travaillons toujours sur un programme qui nous permettrait de réduire cet effet autant que possible.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/introducing-the-new-drum-instrument/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Le Foostival 2014&#160;: une fête&#160;réussie&#160;!</title>
+		<link>https://www.guildwars2.com/fr/news/foostival-2014-a-celebration/</link>
+		<comments>https://www.guildwars2.com/fr/news/foostival-2014-a-celebration/#comments</comments>
+		<pubDate>Wed, 09 Apr 2014 01:00:46 +0000</pubDate>
+		<dc:creator>Ramon Stephanie Domke Bourguet</dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=13029</guid>
+		<description><![CDATA[Le Foostival 2014 a été un vrai succès ! Voici notre vidéo de résumé.</p><p class="more"><a href="https://www.guildwars2.com/fr/news/foostival-2014-a-celebration/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Le Foostival, qui a eu lieu pour la toute première fois à Paris en 2013, est un événement créé par et pour les fans, afin de réunir les différentes communautés de <em>Guild&nbsp;Wars&nbsp;2</em>. Le Foostival de l&rsquo;année dernière a été un succès, et il en a été de même pour celui de cette année ! Des centaines de joueurs venant des quatre coins de l&rsquo;Europe ont participé aux événements qui se déroulaient à Paris et Hambourg, et ils ont été rejoints à distance par les joueurs de la communauté roumaine.</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/dc63fFoostival2014Group.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/dc63fFoostival2014Group-590x269.jpg" alt="Foostival2014Group" width="590" height="269" class="alignnone size-large wp-image-13038" /></a></p>
+<p>Le temps d&rsquo;un samedi après-midi de mars, des joueurs de <em>Guild&nbsp;Wars&nbsp;2</em> se sont rassemblés pour partager l&rsquo;esprit du Foostival. De nombreux joueurs ont ainsi retrouvé de vieux amis aux côtés desquels ils ont joué pendant des années, et beaucoup de nouvelles rencontres ont également eu lieu. En plus de sa convivialité, le Foostival a été l&rsquo;occasion pour nous de profiter directement de vos retours, de mettre en jeu des prix <em>Guild&nbsp;Wars&nbsp;2</em> (dont le grille-pain, très convoité !), de profiter de quelques puzzles de saut et autres joyeusetés quaggans en jeu.</p>
+<p>Nous sommes surpris et heureux de voir que cet événement a autant grandi depuis 2013, et nous espérons qu&rsquo;il rencontrera le même succès dans les années à venir. Nous remercions toutes celles et ceux qui ont pris part à ce festival, que ce soit sur place ou à distance. Nous remercions tout particulièrement les personnes qui ont travaillé sans relâche pour organiser le Foostival cette année. Même avant la clôture du festival, les idées fusaient déjà pour le Foostival 2015&#8230; Nous sommes tous impatients de découvrir ce que la prochaine édition nous réserve !</p>
+<p>Nous avons préparé une petite vidéo pour partager avec vous les meilleurs moments du festival.</p>
+<p><iframe width="590" height="332" src="//www.youtube.com/embed/DlReRuREZ6I?rel=0&modestbranding=1&showinfo=0&cc_load_policy=0" frameborder="0" allowfullscreen></iframe></p>
+<p>Si vous voulez en savoir plus sur le Foostival, vous tenir informé ou bien vous impliquer dans son organisation pour l&rsquo;an prochain, rendez-vous sur le site du <a target="_blank" href="http://www.foostival.com">Foostival</a>&nbsp;!</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/foostival-2014-a-celebration/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Un nouveau tambour et de nouveaux mini-oiseaux dans la boutique aux gemmes&#160;!</title>
+		<link>https://www.guildwars2.com/fr/news/new-drum-instrument-and-avian-minis-in-the-gem-store/</link>
+		<comments>https://www.guildwars2.com/fr/news/new-drum-instrument-and-avian-minis-in-the-gem-store/#comments</comments>
+		<pubDate>Tue, 08 Apr 2014 00:01:56 +0000</pubDate>
+		<dc:creator>Evon Gnashblade</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=12997</guid>
+		<description><![CDATA[Cette semaine en stock&#160;: un tambour mélodieux dernier cri, de nouvelles miniatures et bien d'autres choses encore&#160;!</p><p class="more"><a href="https://www.guildwars2.com/fr/news/new-drum-instrument-and-avian-minis-in-the-gem-store/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<div id="commerce-intro">
+<div class="copy">
+<p>J&rsquo;ai le plaisir de vous présenter les nouvelles promotions hebdomadaires de la Compagnie commerciale du Lion noir&nbsp;! Vous pourrez ajouter trois magnifiques oiseaux miniatures à votre collection, et affûter vos talents de percussionniste avec un tambour&nbsp;!</p>
+<p><img width="189" height="45" class="size-full wp-image-3497" title="signature" alt="" src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2012/10/signature.png"></div>
+<div class="featured"><img width="213" height="341" src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2012/10/black-flag.png" /></div>
+</div>
+<div id="commerce-items">
+<ul>
+<li class="yui3-g">
+<div class="yui3-u-1-2 image-container screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/46ebeDrum-1920x1920.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/5a951Drum-275x275.jpg" alt="" /></a></div>
+<div class="yui3-u-1 text-container">
+<h3>Nouveauté&nbsp;: le Bodhrán mélodieux&nbsp;!</h3>
+<p>
+        Le Bodhrán mélodieux est un instrument fabuleux&nbsp;! La Compagnie commerciale du Lion noir met la musique à la portée de tous grâce à ce tambour.  Improvisez sur différents sons, enregistrez vos propres boucles rythmiques pour jouer avec des amis ou éclatez-vous sur des pistes préenregistrées et des solos aléatoires.
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1 text-container">
+<h3>Nouveauté&nbsp;: le lot de trois mini-oiseaux&nbsp;!</h3>
+<p>
+        Grâce et élégance vous accompagneront dans tous vos voyages avec ces trois nouvelles miniatures aviaires&nbsp;! Une adorable chouette harfang, un sage corbeau et un faucon féroce sont prêts à parcourir le monde à vos côtés&nbsp;!
+    </p>
+</div>
+<div class="yui3-u-1-2 image-container screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/3f776Snowy-Owl-Mini-1920x1920.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/10fbaSnowy-Owl-Mini-275x290.jpg" alt="" /></a></div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1-2 image-container screenshot"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/b52ae03-DigitalDeluxeUpgradeLarge-170x170.jpg" alt="" /></div>
+<div class="yui3-u-1 text-container">
+<h3>Mise à jour vers l'Édition Deluxe numérique</h3>
+<p>
+        En ce moment, la mise à jour vers l&rsquo;Édition Deluxe numérique est disponible à prix réduit&nbsp;! Rendez-vous dans la boutique aux gemmes pour mettre à jour votre compte et recevoir un bonus d&rsquo;influence ponctuel pour votre guilde, un Rytlock miniature, une compétence d&rsquo;élite exclusive, et bien d&rsquo;autres choses&nbsp;!
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1 text-container">
+<h3>Dernière chance</h3>
+<p>
+        Il ne vous reste plus qu&rsquo;une semaine pour obtenir le coup de grâce du ménestrel et acheter des armes tourmentées à un prix&nbsp;exceptionnel&nbsp;!
+    </p>
+</div>
+<div class="yui3-u-1-2 image-container screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/886c504-Minstrel-Finisher-1920x1080.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/a381804-Minstrel-Finisher-275x155.jpg" alt="" /></a></div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1">
+<h3>Prochainement&nbsp;: les modifications du pack de&nbsp;fonctionnalités</h3>
+<p>
+        Comme vous le savez peut-être déjà, des modifications importantes approchent&nbsp;! La Compagnie commerciale du Lion noir procède à certains ajustements, que nous vous transmettons ici&nbsp;:</p>
+<p>        Pour accompagner le nouveau système de garde-robe, les <strong>cristaux de transmutation</strong> et les <strong>pierres de transmutation</strong> seront convertis en charges de transmutation&nbsp;! Double-cliquez sur un cristal en votre possession pour les convertir en une charge, et double-cliquez sur trois pierres pour les convertir en une charge. Les charges de transmutation remplacent désormais les cristaux dans le butin des coffres du Lion noir. </p>
+<p>        Les <strong>briseurs de transmutation</strong> continueront de fonctionner sur les objets qui ont été transmutés avant le pack de fonctionnalités d&rsquo;avril 2014. Vous pouvez aussi échanger chaque briseur de transmutation contre cinq charges de transmutation auprès d&rsquo;un marchand d&rsquo;armures du Lion noir au comptoir de n&rsquo;importe quelle grande ville. </p>
+<p>        Enfin, à partir du 15 avril, seuls les 90 derniers jours de l&rsquo;<strong>historique de vos transactions au comptoir</strong> seront affichés. Si vous souhaitez consulter des transactions plus anciennes, faites-le avant le 15&nbsp;!
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1">
+<h3>Disponibles dès aujourd'hui dans la Boutique aux gemmes&nbsp;!</h3>
+<p>Connectez-vous à <em>Guild&nbsp;Wars&nbsp;2</em> et appuyez sur &laquo;&nbsp;O&nbsp;&raquo; pour accéder à la Compagnie commerciale du Lion noir, profiter de ces offres et bien plus encore&nbsp;!</p>
+</div>
+</li>
+</ul>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/new-drum-instrument-and-avian-minis-in-the-gem-store/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Promotion du week-end&#160;: Les agrandissements de l&#8217;emplacement de sac et de l&#8217;onglet de banque&#160;!</title>
+		<link>https://www.guildwars2.com/fr/news/weekend-sale-bag-slot-and-bank-tab-expansions/</link>
+		<comments>https://www.guildwars2.com/fr/news/weekend-sale-bag-slot-and-bank-tab-expansions/#comments</comments>
+		<pubDate>Fri, 04 Apr 2014 08:01:05 +0000</pubDate>
+		<dc:creator>Evon Gnashblade</dc:creator>
+				<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+		<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=12983</guid>
+		<description><![CDATA[Augmentez la capacité de votre inventaire grâce à cette offre spéciale&#160;!</p><p class="more"><a href="https://www.guildwars2.com/fr/news/weekend-sale-bag-slot-and-bank-tab-expansions/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<div id="commerce-intro">
+<div class="copy">
+<p>La Compagnie commerciale du Lion noir vous réserve des promotions spéciales ce weekend&nbsp;! On ne se contente pas de solder quelques emplacements de sac et de banque&#8230; La mise à jour vers l&rsquo;Édition Deluxe numérique est aussi en promotion&nbsp;! Et, cerise sur le gâteau, nous offrons à chaque compte deux objets de la boutique aux gemmes&nbsp;! Lisez la suite pour en savoir plus.</p>
+<p><img width="189" height="45" class="size-full wp-image-3497" title="signature" alt="" src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2012/10/signature.png"></div>
+<div class="featured"><img width="213" height="341" src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2012/10/black-flag.png" /></div>
+</div>
+<div id="commerce-items">
+<ul>
+<li class="yui3-g">
+<div class="yui3-u-1-2 image-container screenshot"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/cacc701-AdditionalBagSlot-170x170.jpg" alt="" /></div>
+<div class="yui3-u-1 text-container">
+<h3>20&nbsp;% de réduction&nbsp;!</h3>
+<p>
+        Marre de faire des allers-retours chez le marchand pour vendre votre butin&nbsp;? Votre coffre de banque est plein à craquer&nbsp;? Bénéficiez de 20&nbsp;% de réduction pour l&rsquo;achat des agrandissements de l&rsquo;emplacement de sac et des agrandissements de l&rsquo;onglet de&nbsp;banque&nbsp;!
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1 text-container">
+<h3>Des objets gratuits&nbsp;!</h3>
+<p>
+        C&rsquo;est le moment de vous faire plaisir&nbsp;: un kit de réparation instantanée et une augmentation de récolte sont offerts à chaque compte&nbsp;!
+    </p>
+</div>
+<div class="yui3-u-1-2 image-container screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/03/a2fd802-RedEyesMask-1920x1920.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/5230e02-InstantRepairCanisterLarge-170x170.jpg" alt="" /></a></div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1-2 image-container screenshot"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/caaa103-DigitalDeluxeUpgradeLarge-170x170.jpg" alt="" /></div>
+<div class="yui3-u-1 text-container">
+<h3>Mise à jour vers l'Édition Deluxe numérique</h3>
+<p>
+        La mise à jour vers l&rsquo;Édition Deluxe numérique est disponible à prix réduit&nbsp;! Rendez-vous dans la section Améliorations de la Compagnie commerciale du Lion noir pour mettre à jour votre compte et recevoir un bonus de points de rang ponctuel, un Rytlock miniature, une compétence d&rsquo;élite exclusive, et bien d&rsquo;autres choses&nbsp;!
+    </p>
+</div>
+</li>
+<li class="yui3-g">
+<div class="yui3-u-1">
+<h3>Disponibles dès aujourd'hui dans la Boutique aux gemmes&nbsp;!</h3>
+<p>Connectez-vous à <em>Guild&nbsp;Wars&nbsp;2</em> et appuyez sur &laquo;&nbsp;O&nbsp;&raquo; pour accéder à la Compagnie commerciale du Lion noir, profiter de ces offres et bien plus encore&nbsp;!</p>
+</div>
+</li>
+</ul>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/weekend-sale-bag-slot-and-bank-tab-expansions/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Tournoi des légendes&#160;: ouverture des inscriptions</title>
+		<link>https://www.guildwars2.com/fr/news/tournament-of-legends-sign-ups-now-open/</link>
+		<comments>https://www.guildwars2.com/fr/news/tournament-of-legends-sign-ups-now-open/#comments</comments>
+		<pubDate>Fri, 04 Apr 2014 08:00:13 +0000</pubDate>
+		<dc:creator>The Guild Wars 2 Team</dc:creator>
+				<category><![CDATA[FR: Community Events]]></category>
+		<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Home Page]]></category>
+		<category><![CDATA[Launcher]]></category>
+
+		<guid isPermaLink="false">https://www.guildwars2.com/?p=12974</guid>
+		<description><![CDATA[Les inscriptions au Tournoi des légendes de <em>Guild&#160;Wars&#160;2</em> sont ouvertes&#160;!
+Consultez l&#8217;article de blog original du Tournoi des légendes pour connaître les dates et heures précises de début du...</p><p class="more"><a href="https://www.guildwars2.com/fr/news/tournament-of-legends-sign-ups-now-open/">Lire la suite</a></p>]]></description>
+				<content:encoded><![CDATA[<p>Les inscriptions au Tournoi des légendes de <em>Guild&nbsp;Wars&nbsp;2</em> sont ouvertes&nbsp;!</p>
+<p>Consultez <a href="/fr/news/announcing-the-guild-wars-2-tournament-of-legends/">l&rsquo;article de blog original du Tournoi des légendes</a> pour connaître les dates et heures précises de début du tournoi, et pour obtenir des précisions sur les règles de remplacement.</p>
+<p>Pour inscrire votre équipe au Tournoi des légendes, rendez-vous <a href="https://docs.google.com/forms/d/1aRLf-5N0mQyjkTVND1OLOlQkaW69hbrobLzvzYnA-HE/viewform">ici</a>.</p>
+<p>Cette page et ce tournoi sont hébergés par Mistpedia.net.</p>
+<p class="screenshot"><a href="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/1554e01.jpg"><img src="//d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2014/04/1554e01-590x331.jpg" alt="01" width="590" height="331" class="alignnone size-large wp-image-12978" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.guildwars2.com/fr/news/tournament-of-legends-sign-ups-now-open/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
