@@ -1,5 +1,10 @@
 package fr.feedreader.buisness;
 
+import com.rometools.rome.feed.synd.SyndEntry;
+import com.rometools.rome.feed.synd.SyndFeed;
+import com.rometools.rome.io.FeedException;
+import com.rometools.rome.io.SyndFeedInput;
+import com.rometools.rome.io.XmlReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,18 +19,23 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import fr.feedreader.models.FeedUnreadCounter;
+import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Date;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import org.apache.commons.lang3.StringUtils;
+import play.Logger;
 
 public class FeedBuisness {
-
-    private static Logger logger = LoggerFactory.getLogger(FeedBuisness.class);
 
     public static List<Feed> findAll(EntityManager em) {
         TypedQuery<Feed> query = em.createNamedQuery(Feed.findAll, Feed.class);
@@ -59,7 +69,7 @@ public class FeedBuisness {
      * @throws SAXException
      * @throws IOException
      */
-    public static List<FeedItem> refreshFeedItems(EntityManager em, Integer id) throws ParserConfigurationException, SAXException, IOException {
+    public static List<FeedItem> refreshFeedItems(EntityManager em, Integer id) throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
         Feed feed = find(em, id);
         List<FeedItem> updatedFeedItem = new ArrayList<>();
         if (feed != null) {
@@ -68,8 +78,10 @@ public class FeedBuisness {
                 TypedQuery<FeedItem> query = em.createNamedQuery(FeedItem.searchByFeedIdAndFeedItemId, FeedItem.class);
                 query.setParameter("feedId", id);
                 query.setParameter("feedItemId", feedItem.getFeedItemId());
+                FeedItem existing = null;
                 try {
-                    FeedItem existing = query.getSingleResult();
+                    existing = query.getSingleResult();
+
                     // Mise a jour d'article existant
                     if (existing.getUpdated() != null && feedItem.getUpdated() != null && existing.getUpdated().before(feedItem.getUpdated())) {
                         updatedFeedItem.add(existing);
@@ -88,7 +100,11 @@ public class FeedBuisness {
                     FeedItem feedItemCreate = FeedItemBuisness.create(em, feedItem);
                     updatedFeedItem.add(feedItemCreate);
                 } catch (Exception e) {
-                    LoggerFactory.getLogger(FeedBuisness.class).error("Erreur dans la récupértion d'un flux " + id + ", \"" + feedItem.getFeedItemId() + "\n", e);
+                    Logger.error("Erreur dans la récupération d'un flux " + id + ", \"" + feedItem.getFeedItemId() + "\"");
+                    Logger.error(e.getLocalizedMessage());
+                    logFeedItem(existing);
+                    logFeedItem(feedItem);
+                    
                 }
             }
             // Mise à jour de la date de récupération du flux
@@ -102,15 +118,27 @@ public class FeedBuisness {
         Feed feed = find(em, id);
         return feed.getFeedItems();
     }
+    public static List<FeedItem> getFeedItems(URI uri) throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
+        return getFeedItems(uri.toURL().toString());
+    }
 
-    public static List<FeedItem> getFeedItems(String url) throws ParserConfigurationException, SAXException, IOException {
-        logger.info("Récupération du flux \"" + url + "\" ...");
-        SAXParserFactory parserFactory = SAXParserFactory.newInstance();
-        SAXParser parser = parserFactory.newSAXParser();
-        FeedProxyHandler feedHandler = new FeedProxyHandler();
-        parser.parse(url, feedHandler);
-        logger.info("Récupération du flux \"" + url + "\" Terminer");
-        return feedHandler.getFeedItems();
+    public static List<FeedItem> getFeedItems(String uri) throws IOException, IllegalArgumentException, FeedException, URISyntaxException {
+        Logger.info("Récupération du flux \"" + uri + "\" ...");
+        SyndFeedInput input = new SyndFeedInput();
+        XmlReader xmlreader = new XmlReader(new URI(uri).toURL());
+        SyndFeed build = input.build(xmlreader);
+        List<SyndEntry> syndEntries = build.getEntries();
+        List<FeedItem> feedItems = syndEntries.stream().map((SyndEntry syndEntry) -> {
+            return new FeedItem(
+                syndEntry.getUri(),
+                syndEntry.getTitle(),
+                syndEntry.getLink(),
+                syndEntry.getEnclosures().size() > 0 ? syndEntry.getEnclosures().get(0).getUrl() : null,
+                syndEntry.getContents().size() > 0 ? syndEntry.getContents().get(0).getValue() : null,
+                syndEntry.getUpdatedDate()
+            );
+        }).collect(Collectors.toList());
+        return feedItems;
     }
 
     public static Map<Feed, Long> countUnread(EntityManager em) {
@@ -132,32 +160,62 @@ public class FeedBuisness {
             TypedQuery<FeedItem> lastItemQuery = em.createNamedQuery(FeedItem.findAllByFeedId, FeedItem.class);
             lastItemQuery.setParameter("feedId", feed.getId());
             lastItemQuery.setMaxResults(1);
+            FeedItem feedItem = null;
             try {
-                FeedItem feedItem = lastItemQuery.getSingleResult();
+                feedItem = lastItemQuery.getSingleResult();
                 if (feedItem.getUpdated() != null) {
-                    logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : " + feedItem.getUpdated().toString());
+                    Logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : " + feedItem.getUpdated().toString());
                 } else {
-                    logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : null");
+                    Logger.info("Dernier flux récupérer pour \"" + feed.getName() + "\" : null");
                 }
 
                 // Récupération des de nouveau article 
                 List<FeedItem> feedItems = refreshFeedItems(em, feed.getId());
                 feedsUpdated.put(feed, feedItems);
             } catch (javax.persistence.NoResultException e) {
-                logger.info("Premier flux récupérer pour \"" + feed.getName() + "\"");
+                Logger.info("Premier flux récupérer pour \"" + feed.getName() + "\"");
                 try {
                     List<FeedItem> feedItems = refreshFeedItems(em, feed.getId());
                     feedsUpdated.put(feed, feedItems);
                 } catch (Exception e1) {
-                    logger.info("Erreur lors de la récumération du premier flux pour \"" + feed.getName() + "\"");
-                    e.printStackTrace();
+                    Logger.error("Erreur lors de la récumération du premier flux pour \"" + feed.getName() + "\"");
+                    Logger.error(e1.getLocalizedMessage());
+                    logFeed(feed);
+                    logFeedItem(feedItem);
                 }
             } catch (Exception e) {
-                logger.error("Erreur lors de la mise à jour du flux : \"" + feed.getName() + "\"");
-                e.printStackTrace();
+                Logger.error("Erreur lors de la mise à jour du flux : \"" + feed.getName() + "\"");
+                Logger.error(e.getLocalizedMessage());
+                logFeed(feed);
+                logFeedItem(feedItem);
             }
         }
 //		FeedBuisness.countUnread(JPA.em());
         return feedsUpdated;
     }
+    
+    private static void logFeed(Feed feed) {
+        if (feed == null) {
+            Logger.error("feed null");
+        } else {
+            Logger.error("feedItem :");
+            Logger.error("\t - getUrl() : " + StringUtils.length(feed.getUrl()));
+            Logger.error("\t - getName() : " + StringUtils.length(feed.getName()));
+            Logger.error("\t - getDescription() : " + StringUtils.length(feed.getDescription()));
+        }
+    }
+    
+    private static void logFeedItem(FeedItem feedItem) {
+        if (feedItem == null) {
+            Logger.error("feedItem null");
+        } else {
+            Logger.error("feedItem :");
+            Logger.error("\t - getTitle() : " + StringUtils.length(feedItem.getTitle()));
+            Logger.error("\t - getEnclosure() : " + StringUtils.length(feedItem.getEnclosure()));
+            Logger.error("\t - getFeedItemId() : " + StringUtils.length(feedItem.getFeedItemId()));
+            Logger.error("\t - getLink() : " + StringUtils.length(feedItem.getLink()));
+            Logger.error("\t - getSummary() : " + StringUtils.length(feedItem.getSummary()));
+        }
+    }
 }
+

@@ -18,10 +18,13 @@ libraryDependencies ++= Seq(
   javaWs, // Webservice Java
   // WebJars pull in client-side web libraries
   "org.webjars" %% "webjars-play" % "2.3.0",
+  // Databases
   "org.hibernate" % "hibernate-entitymanager" % "4.3.4.Final",
   "mysql" % "mysql-connector-java" % "5.1.31",
   "com.h2database" % "h2" % "1.3.175",
   "org.hsqldb" % "hsqldb" % "2.3.2",
+  // Lib
+  "com.rometools" % "rome" % "1.5.0",
   //"org.apache.httpcomponents" % "httpclient" % "4.3.2",
   //"org.apache.directory.studio" % "org.apache.commons.io" % "2.4",
   // webjars
