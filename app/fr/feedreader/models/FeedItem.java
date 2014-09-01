@@ -36,7 +36,7 @@ public class FeedItem {
     private String link;
     private String enclosure;
 
-    @Column(length = 32768)
+    @Column(length = 1048576)
     private String summary;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -47,6 +47,18 @@ public class FeedItem {
 
     private Boolean readed = null;
 
+    public FeedItem() {
+    }
+    
+    public FeedItem(String feedItemId, String title, String link, String enclosure, String summary, Date updated) {
+        this.feedItemId = feedItemId;
+        this.title = title;
+        this.link = link;
+        this.enclosure = enclosure;
+        this.summary = summary;
+        this.updated = updated;
+    }
+    
     public String getFeedItemId() {
         return feedItemId;
     }
