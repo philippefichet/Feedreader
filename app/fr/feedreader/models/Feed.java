@@ -2,6 +2,7 @@ package fr.feedreader.models;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,7 +30,7 @@ public class Feed {
     private String url;
     private String description;
 
-    @OneToMany(mappedBy = "feed")
+    @OneToMany(mappedBy = "feed", cascade = CascadeType.ALL)
     @OrderBy(value = "updated DESC")
     private List<FeedItem> feedItems;
 
@@ -127,4 +128,8 @@ public class Feed {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "Feed{" + "id=" + id + ", name=" + name + ", url=" + url + ", description=" + description + ", lastUpdate=" + lastUpdate + ", enable=" + enable + '}';
+    }
 }
