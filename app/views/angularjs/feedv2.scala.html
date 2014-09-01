@@ -1,7 +1,14 @@
 @layout.feed("Visualisation des flux rss/atom") {
 <div id="feed" class="row" ng-controller="FeedController">
     <div id="feed-list">
-        <div class="loader" ng-if="!feedLoading"> Loading ... </div>
+        <div class="loader" ng-if="!feedLoading">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+            </div>
+        </div>
         <ul>
             <li ng-if="feedLoading" ng-repeat="feed in feeds" class="feed">
                 <button title="{{feed.lastUpdate}}" ng-class="{'btn-success': feed.selected, 'btn-default': !feed.selected}" type="button" class="btn" ng-click="loadFeedItem(feed)" >{{feed.name}}<span ng-if="feed.unread > 0" class="badge">{{feed.unread}}</span></button>
@@ -10,7 +17,14 @@
     </div>
     <div id="feed-list-toggle"></div>
     <div id="feed-items-container">
-        <div class="loader" ng-if="feedItemsLoading"> Loading ... </div>
+        <div class="loader" ng-if="feedItemsLoading">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+            </div>
+        </div>
         <div ng-if="currentFeed != null" style="text-align: center">
             <h2>{{currentFeed.name}}</h2>
             <small>{{currentFeed.lastUpdate}}</small>
