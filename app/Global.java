@@ -22,46 +22,6 @@ public class Global extends GlobalSettings {
     @Override
     public void onStart(Application app) {
         jobsInit(app);
-        applicationInit(app);
-    }
-
-    /**
-     * Récupére le chemin de la configuration de l'application (pas du play
-     * framework)
-     *
-     * @param app Application lancé
-     * @return Chemin de la configuration de l'application (pas du play
-     * framework)
-     */
-    protected String getHomeConfiguration(Application app) {
-        String application = app.configuration().getString(
-                "configuration.application");
-        if (application == null) {
-            String userDir = System.getProperty("user.dir") + File.separator;
-            if (userDir == null) {
-                userDir = "~/";
-            }
-            application = userDir + ".feedreader/application.json";
-        }
-        return application;
-    }
-
-    /**
-     * Executed when the application stops.
-     */
-    public void onStop(Application app) {
-        String application = getHomeConfiguration(app);
-        conf.Application.getInstance().saveFromPath(application);
-    }
-
-    /**
-     * Initialisation de la configuration de l'application
-     *
-     * @param app Application lancé
-     */
-    public void applicationInit(Application app) {
-        String application = getHomeConfiguration(app);
-        conf.Application.getInstance().loadFromPath(application);
     }
 
     public void jobsInit(Application app) {
