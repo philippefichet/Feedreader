@@ -34,16 +34,16 @@ public class Database extends Plugin {
 
     @Override
     public void onStart() {
-        Logger.info("Mise à jour de la base de données");
+        if (Logger.isInfoEnabled()) {
+            Logger.info("Mise à jour de la base de données");
+        }
         try (Connection connection = play.db.DB.getDataSource().getConnection(); Statement createStatement = connection.createStatement();) {
             createStatement.executeUpdate("ALTER TABLE FEEDITEM ALTER COLUMN SUMMARY VARCHAR(1048576)");
         } catch (SQLException ex) {
             Logger.error("Impossible de mettre à jour la base de données à partir du plugin", ex);
         }
-        Logger.info("Fin de la mise à jour de la base de données");
-        
-        JPA.withTransaction(() -> {
-            JPA.em().find(FeedItem.class, 6498);
-        });
+        if (Logger.isInfoEnabled()) {
+            Logger.info("Fin de la mise à jour de la base de données");
+        }
     }
 }
