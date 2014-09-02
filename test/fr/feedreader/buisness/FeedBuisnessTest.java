@@ -9,11 +9,10 @@ import fr.feedreader.models.Feed;
 import fr.feedreader.models.FeedItem;
 import java.io.File;
 import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import org.junit.Test;
 import play.db.jpa.JPA;
+import static fr.feedreader.test.Application.configForTest;
+import static play.test.Helpers.inMemoryDatabase;
 import static play.test.Helpers.fakeApplication;
 import static play.test.Helpers.running;
 import static org.junit.Assert.*;
@@ -26,7 +25,7 @@ public class FeedBuisnessTest {
     
     @Test
     public void AddJPAWithTransaction() {
-        running(fakeApplication(), () ->  {
+        running(fakeApplication(configForTest()), () ->  {
             JPA.withTransaction(() -> {
                 Feed feed = new Feed();
                 feed.setDescription("Test Description");
@@ -40,7 +39,7 @@ public class FeedBuisnessTest {
     
     @Test
     public void getFeedAtom() {
-        running(fakeApplication(), () ->  {
+        running(fakeApplication(configForTest()), () ->  {
             JPA.withTransaction(() -> {
                 List<FeedItem> feedItems = FeedBuisness.getFeedItems(new File("./test/atom.atom").toURI());
                 int size = feedItems.size();
@@ -73,7 +72,7 @@ public class FeedBuisnessTest {
     
     @Test
     public void getFeedAtomLinuxFr() {
-        running(fakeApplication(), () ->  {
+        running(fakeApplication(configForTest()), () ->  {
             JPA.withTransaction(() -> {
                 List<FeedItem> feedItems = FeedBuisness.getFeedItems(new File("./test/linuxfr.atom").toURI());
                 int size = feedItems.size();
@@ -102,18 +101,15 @@ public class FeedBuisnessTest {
     
     @Test
     public void refresh() {
-        running(fakeApplication(), () ->  {
+        running(fakeApplication(configForTest()), () ->  {
             JPA.withTransaction(() -> {
-                // Clean databases
-                List<Feed> findAll = FeedBuisness.findAll(JPA.em());
-                findAll.forEach((feed) -> {
-                    FeedBuisness.delete(JPA.em(), feed);
-                });
                 Feed diablo3 = new Feed();
                 diablo3.setDescription("Diablo 3");
                 diablo3.setUrl("http://eu.battle.net/d3/fr/feed/news");
                 FeedBuisness.add(JPA.em(), diablo3);
-                FeedBuisness.refreshFeedItems(JPA.em(), diablo3.getId());
+                assertTrue(diablo3.getId() > 0);
+                List<FeedItem> refreshFeedItems = FeedBuisness.refreshFeedItems(JPA.em(), diablo3.getId());
+                assertTrue(refreshFeedItems.size() > 0);
             });
         });
     }
