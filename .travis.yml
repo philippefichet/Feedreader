@@ -5,3 +5,20 @@ script: sbt test
 sbt.version: 0.13.5
 jdk:
   - oraclejdk8
+language: scala
+scala:
+  - 2.11.1
+script: sbt test
+sbt.version: 0.13.5
+jdk:
+  - oraclejdk8
+ 
+env:
+  - ACTIVATOR_VERSION=1.2.10
+
+before_script:
+- wget http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VERSION}/typesafe-activator-${ACTIVATOR_VERSION}-minimal.zip
+- unzip -q activator-${ACTIVATOR_VERSION}.zip
+script:
+-  activator test
+
