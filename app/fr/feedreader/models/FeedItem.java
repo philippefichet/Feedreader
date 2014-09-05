@@ -16,11 +16,16 @@ import javax.persistence.TemporalType;
 @Entity
 @NamedQueries({
     @NamedQuery(name = FeedItem.searchByFeedIdAndFeedItemId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId AND fi.feedItemId = :feedItemId"),
-    @NamedQuery(name = FeedItem.findAllByFeedId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId ORDER BY fi.updated DESC, fi.id DESC"),
+    @NamedQuery(name = FeedItem.findAllByFeedId, query = "SELECT fi FROM FeedItem fi WHERE fi.feed.id = :feedId ORDER BY fi.id DESC"),
     @NamedQuery(name = FeedItem.countByFeedId, query = "SELECT COUNT(fi) FROM FeedItem fi WHERE fi.feed.id = :feedId")
 })
 public class FeedItem {
 
+    /**
+     * Requête récupérant un article d'un flux
+     * @param feedId Identifiant du flux
+     * @raram feedItemId Idenfiant de l'article de flux à récupérer
+     */
     public final static String searchByFeedIdAndFeedItemId = "fr.feedreader.models.FeedItem.searchByFeedIdAndFeedItemId";
     public final static String findAllByFeedId = "fr.feedreader.models.FeedItem.findAllByFeedId";
     public final static String countByFeedId = "fr.feedreader.models.FeedItem.count";
