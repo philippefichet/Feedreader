@@ -1,13 +1,6 @@
 language: scala
-script: sbt test
 sbt.version: 0.13.5
 jdk:
   - oraclejdk8
 scala:
   - 2.11.1
-
-before_script:
-  - wget http://downloads.typesafe.com/typesafe-activator/1.3.2/typesafe-activator-1.3.2-minimal.zip
-  - unzip typesafe-activator-1.3.2-minimal.zip
-script:
-  -  activator-1.3.2-minimal/activator test
