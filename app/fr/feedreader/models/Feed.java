@@ -31,7 +31,7 @@ public class Feed {
     private String description;
 
     @OneToMany(mappedBy = "feed", cascade = CascadeType.ALL)
-    @OrderBy(value = "updated DESC")
+    @OrderBy(value = "id DESC")
     private List<FeedItem> feedItems;
 
     @Temporal(TemporalType.TIMESTAMP)
