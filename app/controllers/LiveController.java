@@ -57,7 +57,7 @@ public class LiveController extends Controller {
         }
     }
 
-    public static WebSocket<JsonNode> feed() {
+    public WebSocket<JsonNode> feed() {
         return new WebSocket<JsonNode>() {
 
             // Called when the Websocket Handshake is done.

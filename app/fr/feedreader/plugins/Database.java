@@ -5,6 +5,7 @@
  */
 package fr.feedreader.plugins;
 
+import com.google.inject.Inject;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -22,6 +23,7 @@ public class Database extends Plugin {
 
     private final Application application;
     
+    @Inject
     public Database(Application application) {
         this.application = application;
     }

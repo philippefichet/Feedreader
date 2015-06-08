@@ -11,18 +11,18 @@ import play.mvc.Security;
 public class AdminController extends Controller {
 
     @Security.Authenticated(SecuredAdmin.class)
-    public static Result index() {
+    public Result index() {
         return ok(views.html.feedEdit.render());
     }
 
     @Security.Authenticated(SecuredAdmin.class)
-    public static Result application() {
+    public Result application() {
 
         return ok(views.html.application.render(Application.getInstance(), new HashMap<String, String>()));
     }
 
     @Security.Authenticated(SecuredAdmin.class)
-    public static Result saveApplication() {
+    public Result saveApplication() {
         Map<String, String> errors = new HashMap<>();
         String[] bootswatch = request().body().asFormUrlEncoded().get("bootswatch");
         if (bootswatch != null && bootswatch.length > 0) {

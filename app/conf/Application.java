@@ -8,10 +8,12 @@ import java.util.TreeMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import play.api.libs.Files;
 import play.libs.Json;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.logging.Level;
 import play.Play;
 
 public class Application {
@@ -66,21 +68,25 @@ public class Application {
 					+ pathfile.getAbsolutePath() + "\"");
 			return;
 		}
-		String fileConfig = Files.readFile(pathfile);
-		JsonNode jsonNode = Json.parse(fileConfig);
-		JsonNode bootswatch = jsonNode.get("bootswatch");
-		if (bootswatch != null) {
-			setBootswatch(bootswatch.asText());
-		}
-		JsonNode bootswatchAvailable = jsonNode.get("bootswatchAvailable");
-		if (bootswatchAvailable != null) {
-			getBootswatchAvailable().clear();
-			Iterator<String> i = bootswatchAvailable.fieldNames();
-			while(i.hasNext()) {
-				String name = i.next();
-				String value = bootswatchAvailable.get(name).asText();
-				getBootswatchAvailable().put(name, value);
+		try {
+			String fileConfig = new String(Files.readAllBytes(pathfile.toPath()));
+			JsonNode jsonNode = Json.parse(fileConfig);
+			JsonNode bootswatch = jsonNode.get("bootswatch");
+			if (bootswatch != null) {
+				setBootswatch(bootswatch.asText());
 			}
+			JsonNode bootswatchAvailable = jsonNode.get("bootswatchAvailable");
+			if (bootswatchAvailable != null) {
+				getBootswatchAvailable().clear();
+				Iterator<String> i = bootswatchAvailable.fieldNames();
+				while(i.hasNext()) {
+					String name = i.next();
+					String value = bootswatchAvailable.get(name).asText();
+					getBootswatchAvailable().put(name, value);
+				}
+			}
+		} catch(IOException e) {
+			logger.error("Erreur lors de la lecture de la configuration", e);
 		}
 		
 	}
@@ -115,11 +121,19 @@ public class Application {
 		if (!pathfile.exists()) {
 			// @TODO création des dossiers
 			String absolutePath = pathfile.getAbsolutePath();
-			Files.createDirectory(new File(absolutePath.substring(0, absolutePath.lastIndexOf(File.separator))));
+			try {
+				Files.createDirectory(new File(absolutePath.substring(0, absolutePath.lastIndexOf(File.separator))).toPath());
+			} catch(IOException e) {
+				logger.error("Erreur lors de la création du dossier \"" + pathfile.getAbsolutePath() + "\"");
+			}
 		}
 		
 		String applicationJson = Json.toJson(this).toString();
-		Files.writeFile(pathfile, applicationJson);
+		try {
+			Files.write(pathfile.toPath(), applicationJson.getBytes());
+		} catch (IOException ex) {
+			logger.error("Erreur lors de l'ecriture de la configuration");
+		}
 	}
 	
 	public String getBootswatch() {

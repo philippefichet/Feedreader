@@ -21,17 +21,17 @@ import play.mvc.Result;
 public class FeedItemController extends Controller {
 
     @Transactional
-    public static Result setReadedTrue(Integer feedItemId) {
+    public Result setReadedTrue(Integer feedItemId) {
         return setReaded(feedItemId, Boolean.TRUE);
     }
 
     @Transactional
-    public static Result setReadedFalse(Integer feedItemId) {
+    public Result setReadedFalse(Integer feedItemId) {
         return setReaded(feedItemId, Boolean.FALSE);
     }
 
     @Transactional
-    public static Result setReaded(Integer feedItemId, Boolean readed) {
+    public Result setReaded(Integer feedItemId, Boolean readed) {
         FeedItem feedItem = FeedItemBuisness.setReaded(JPA.em(), feedItemId, readed);
         ObjectNode feedItemJson = Json.newObject();
         feedItemJson.put("readed", feedItem.getReaded());
@@ -49,7 +49,7 @@ public class FeedItemController extends Controller {
     }
 
     @Transactional(readOnly = true)
-    public static Result feedItem(Integer feedId, Integer page) {
+    public Result feedItem(Integer feedId, Integer page) {
         ObjectNode json = Json.newObject();
         ArrayNode feedItemsJson = json.arrayNode();
         json.put("pages", FeedItemBuisness.getTotalPage(JPA.em(), feedId));

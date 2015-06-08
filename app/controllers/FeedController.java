@@ -24,13 +24,13 @@ public class FeedController extends Controller {
 
     @Transactional(readOnly = true)
     @Security.Authenticated(SecuredUser.class)
-    public static Result show() {
+    public Result show() {
         return ok(views.html.angularjs.feedv2.render());
     }
 
     @Transactional(readOnly = true)
     @Security.Authenticated(SecuredUser.class)
-    public static Result get() {
+    public Result get() {
         List<Feed> feeds = FeedBuisness.findAll(JPA.em());
         Map<Feed, Long> counter = FeedBuisness.countUnread(JPA.em());
         return ok(feedToJsonUnread(feeds, counter));
@@ -48,7 +48,7 @@ public class FeedController extends Controller {
 
     @Transactional
     @Security.Authenticated(SecuredAdmin.class)
-    public static Result add() {
+    public Result add() {
         JsonNode jsonNode = request().body().asJson();
         Feed feed = new Feed();
         jsonToFeed(jsonNode, feed);
@@ -83,7 +83,7 @@ public class FeedController extends Controller {
 
     @Transactional
     @Security.Authenticated(SecuredAdmin.class)
-    public static Result update(Integer id) {
+    public Result update(Integer id) {
         JsonNode jsonNode = request().body().asJson();
         Feed feed = FeedBuisness.find(JPA.em(), id);
         jsonToFeed(jsonNode, feed);
@@ -94,7 +94,7 @@ public class FeedController extends Controller {
 
     @Transactional
     @Security.Authenticated(SecuredAdmin.class)
-    public static Result remove(Integer id) {
+    public Result remove(Integer id) {
         Feed feed = FeedBuisness.find(JPA.em(), id);
         FeedBuisness.delete(JPA.em(), feed);
 

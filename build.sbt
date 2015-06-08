@@ -6,6 +6,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 scalaVersion := "2.11.1"
 
+routesGenerator := InjectedRoutesGenerator
+
 libraryDependencies ++= Seq(
   // Select Play modules
   jdbc,      // The JDBC connection pool and the play.api.db API
@@ -17,7 +19,7 @@ libraryDependencies ++= Seq(
   javaCore,  // The core Java API
   javaWs, // Webservice Java
   // WebJars pull in client-side web libraries
-  "org.webjars" %% "webjars-play" % "2.3.0",
+  "org.webjars" %% "webjars-play" % "2.4.0-1",
   // Databases
   "org.hibernate" % "hibernate-entitymanager" % "4.3.4.Final",
   "mysql" % "mysql-connector-java" % "5.1.31",
